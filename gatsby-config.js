@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Al-Handsya for Construction and Real Estate`,
+    description: `Al-Handsya is a leading construction and real estate company based in Cairo, EG`,
+    author: `@alhandsya`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
