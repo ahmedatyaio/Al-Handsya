@@ -261,9 +261,11 @@ export const CategoriesPanel = styled.div`
 `;
 
 export const OurEquipment = styled.div`
-  margin-top: 10rem;
+  width: ${props => props.theme.responsive.maxWidth};
+  margin: 10rem auto 0;
   display: flex;
   justify-content: space-around;
+  width: 100%;
   .equipment-block {
     width: 24%;
     background: #000000;
@@ -311,9 +313,10 @@ export const OurEquipment = styled.div`
   }
   @media (min-width: 320px) and (max-width: 480px) {
     justify-content: start;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     .equipment-block {
-      width: 75%;
+      width: 90%;
       flex: 0 0 auto;
     }
   }
@@ -373,6 +376,7 @@ export const AssetsAndEquipment = styled.div`
 `;
 
 export const OurProjects = styled.div`
+  width: ${props => props.theme.responsive.maxWidth};
   margin: 10rem auto;
   display: flex;
   justify-content: space-around;
@@ -462,10 +466,12 @@ export const OurProjects = styled.div`
   }
   @media (min-width: 320px) and (max-width: 480px) {
     justify-content: start;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     flex-wrap: nowrap;
+    width: 100%;
     .project-block {
-      width: 75% !important;
+      width: 90% !important;
       flex: 0 0 auto;
       &:nth-child(4),
       &:nth-child(5) {

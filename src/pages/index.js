@@ -137,45 +137,43 @@ const index = ({ data }) => {
             </div>
           </div>
         </CategoriesPanel>
-        <OurEquipment>
-          <div className="equipment-block">
-            <Link to="/">
-              <BackgroundImg fluid={data.waterproofImg.childImageSharp.fluid} />
-              <h2>Water Proofing Equipment</h2>
-            </Link>
-          </div>
-          <div className="equipment-block">
-            <Link to="/">
-              <BackgroundImg fluid={data.concreteImg.childImageSharp.fluid} />
-              <h2>Concrete repair & Flooring</h2>
-            </Link>
-          </div>
-          <div className="equipment-block">
-            <Link to="/">
-              <BackgroundImg fluid={data.safetyImg.childImageSharp.fluid} />
-              <h2>Safety tools & Work customs</h2>
-            </Link>
-          </div>
-          <div className="equipment-block">
-            <Link to="/">
-              <BackgroundImg
-                fluid={data.measurementImg.childImageSharp.fluid}
-              />
-              <h2>Measurement & Testing tools</h2>
-            </Link>
-          </div>
-        </OurEquipment>
-        <OurProjects>
-          {data.allProjects.edges.map(project => (
-            <div key={project.node.projectName} className="project-block">
-              <Link to="/">
-                <BackgroundImg fluid={project.node.heroImage.fluid} />
-                <h2>{project.node.projectName}</h2>
-              </Link>
-            </div>
-          ))}
-        </OurProjects>
       </div>
+      <OurEquipment>
+        <div className="equipment-block">
+          <Link to="/">
+            <BackgroundImg fluid={data.waterproofImg.childImageSharp.fluid} />
+            <h2>Water Proofing Equipment</h2>
+          </Link>
+        </div>
+        <div className="equipment-block">
+          <Link to="/">
+            <BackgroundImg fluid={data.concreteImg.childImageSharp.fluid} />
+            <h2>Concrete repair & Flooring</h2>
+          </Link>
+        </div>
+        <div className="equipment-block">
+          <Link to="/">
+            <BackgroundImg fluid={data.safetyImg.childImageSharp.fluid} />
+            <h2>Safety tools & Work customs</h2>
+          </Link>
+        </div>
+        <div className="equipment-block">
+          <Link to="/">
+            <BackgroundImg fluid={data.measurementImg.childImageSharp.fluid} />
+            <h2>Measurement & Testing tools</h2>
+          </Link>
+        </div>
+      </OurEquipment>
+      <OurProjects>
+        {data.allProjects.edges.map(project => (
+          <div key={project.node.projectName} className="project-block">
+            <Link to="/">
+              <BackgroundImg fluid={project.node.heroImage.fluid} />
+              <h2>{project.node.projectName}</h2>
+            </Link>
+          </div>
+        ))}
+      </OurProjects>
     </Layout>
   );
 };
