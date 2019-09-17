@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import BackgroundImg from 'gatsby-background-image';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import OurPartners from '../components/OurPartners';
 
 import {
@@ -14,7 +14,6 @@ import {
 } from '../components/styles/index';
 
 const index = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       {/* <HeaderCarousel photo={data.headerOne.childImageSharp.fluid} /> */}

@@ -1,14 +1,14 @@
-import React from "react"
-import { ThemeProvider } from "styled-components"
-import Helmet from "react-helmet"
-import favicon from "../images/favicon.ico"
-import GlobalStyle from "../styles/global"
-import theme from "../styles/theme"
-import Menu from "../components/Menu"
-import MobileMenu from "../components/MobileMenu"
-import Footer from "../components/Footer"
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Helmet from 'react-helmet';
+import favicon from '../images/favicon.ico';
+import GlobalStyle from '../styles/global';
+import theme from '../styles/theme';
+import Menu from './Menu';
+import MobileMenu from './MobileMenu';
+import Footer from './Footer';
 
-import "../images/icons/icons.css"
+import '../images/icons/icons.css';
 
 const Template = ({ children }) => {
   return (
@@ -33,7 +33,7 @@ const Template = ({ children }) => {
       </ThemeProvider>
       <GlobalStyle />
     </div>
-  )
-}
+  );
+};
 
-export default Template
+export default Template;
