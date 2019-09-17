@@ -119,7 +119,7 @@ const index = ({ data }) => {
                   </Link>
                 </div>
                 <div className="block">
-                  <span className="icon-worldwide"></span>
+                  <span className="icon-engineer"></span>
                   <h3>
                     <Link to="/">
                       Specialized Engineering Application Division

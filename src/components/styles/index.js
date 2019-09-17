@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Header = styled.div`
   height: 80vh;
@@ -9,7 +9,7 @@ export const Header = styled.div`
   @media (min-width: 320px) and (max-width: 360px) {
     height: 90vh;
   }
-`
+`;
 
 export const HeaderParagraph = styled.div`
   position: relative;
@@ -37,7 +37,7 @@ export const HeaderParagraph = styled.div`
     font-weight: 600;
     font-size: 1.4rem;
   }
-`
+`;
 
 export const ServicesBlocks = styled.div`
   margin-top: -8rem;
@@ -59,7 +59,7 @@ export const ServicesBlocks = styled.div`
   .block-four {
     background: ${props => props.theme.colors.yellow4};
   }
-`
+`;
 export const TwoSidedBlock = styled.div`
   display: flex;
   justify-content: space-between;
@@ -151,8 +151,8 @@ export const TwoSidedBlock = styled.div`
     }
   }
   @media (min-width: 320px) and (max-width: 480px) {
-    flex-direction: ${props => (props.mission ? "column-reverse" : "column")};
-    margin-top: ${props => (props.mission ? "0" : "4rem")};
+    flex-direction: ${props => (props.mission ? 'column-reverse' : 'column')};
+    margin-top: ${props => (props.mission ? '0' : '4rem')};
     .block-typography {
       width: 95%;
     }
@@ -161,7 +161,7 @@ export const TwoSidedBlock = styled.div`
       margin: 5rem 0 3rem;
     }
   }
-`
+`;
 
 export const CategoriesPanel = styled.div`
   margin-top: 10rem;
@@ -258,7 +258,7 @@ export const CategoriesPanel = styled.div`
       }
     }
   }
-`
+`;
 
 export const OurEquipment = styled.div`
   margin-top: 10rem;
@@ -275,7 +275,7 @@ export const OurEquipment = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      content: "";
+      content: '';
       transition: background 1s ease-out;
       background: rgb(255, 255, 255);
       background: -moz-linear-gradient(
@@ -309,7 +309,15 @@ export const OurEquipment = styled.div`
       font-size: 1.7rem;
     }
   }
-`
+  @media (min-width: 320px) and (max-width: 480px) {
+    justify-content: start;
+    overflow: auto;
+    .equipment-block {
+      width: 75%;
+      flex: 0 0 auto;
+    }
+  }
+`;
 
 export const CenterParagraph = styled.div`
   text-align: center;
@@ -326,7 +334,7 @@ export const CenterParagraph = styled.div`
     font-family: ${props => props.theme.fonts.primary};
     color: ${props => props.theme.colors.yellow};
   }
-`
+`;
 export const AssetsAndEquipment = styled.div`
   display: flex;
   justify-content: space-between;
@@ -362,7 +370,7 @@ export const AssetsAndEquipment = styled.div`
       }
     }
   }
-`
+`;
 
 export const OurProjects = styled.div`
   margin: 10rem auto;
@@ -381,7 +389,7 @@ export const OurProjects = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      content: "";
+      content: '';
       transition: background 1s ease-out;
       background: rgb(255, 255, 255);
       background: -moz-linear-gradient(
@@ -452,7 +460,20 @@ export const OurProjects = styled.div`
       margin-left: 2rem;
     }
   }
-`
+  @media (min-width: 320px) and (max-width: 480px) {
+    justify-content: start;
+    overflow: auto;
+    flex-wrap: nowrap;
+    .project-block {
+      width: 75% !important;
+      flex: 0 0 auto;
+      &:nth-child(4),
+      &:nth-child(5) {
+        height: 30rem;
+      }
+    }
+  }
+`;
 export const Project = styled.div`
   margin: 0 1rem;
   img {
@@ -475,7 +496,7 @@ export const Project = styled.div`
       font-size: 2rem;
     }
   }
-`
+`;
 
 export const CallToAction = styled.div`
   background: ${props => props.theme.colors.yellow};
@@ -506,7 +527,7 @@ export const CallToAction = styled.div`
       }
     }
   }
-`
+`;
 
 export const OurPartners = styled.div`
   box-shadow: 0px 3px 8px 0px rgba(184, 184, 184, 0.3);
@@ -514,17 +535,17 @@ export const OurPartners = styled.div`
     width: 90%;
     margin: auto;
   }
-`
+`;
 
 export const LetsWorkTogether = styled.div`
-  background-image: url("/static/contact-details-9f424df6b3e95c28ef6d9eee004d1f26.png");
+  background-image: url('/static/contact-details-9f424df6b3e95c28ef6d9eee004d1f26.png');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   margin-top: 10rem;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -595,7 +616,7 @@ export const LetsWorkTogether = styled.div`
       }
     }
   }
-`
+`;
 
 export const Footer = styled.div`
   .footer-bottom {
@@ -603,4 +624,4 @@ export const Footer = styled.div`
     color: #ffffff;
     padding: 2rem;
   }
-`
+`;
