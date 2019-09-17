@@ -19,7 +19,6 @@ const StyledMenu = styled.ul`
   box-shadow: 0 1px 9px 1px rgba(184, 184, 184, 0.7);
   background: #fff;
   bottom: 0;
-  height: 10vh;
   margin: 0;
   border-radius: 4px 4px 0 0;
   li {
@@ -32,6 +31,7 @@ const StyledMenu = styled.ul`
       font-family: ${props => props.theme.fonts.primary};
       display: flex;
       flex-direction: column;
+      padding: 2rem 0;
     }
     button {
       border: 0;
@@ -44,7 +44,7 @@ const StyledMenu = styled.ul`
     }
   }
   .active-mobile-panel {
-    color: ${props => props.theme.colors.yellow};
+    color: ${props => props.theme.colors.yellow3};
   }
 `;
 
@@ -64,6 +64,7 @@ const StyledFullMenu = styled.div`
     border-radius: 10rem;
     z-index: 10;
     font-family: ${props => props.theme.fonts.primary};
+    font-size: 3rem;
   }
   ul {
     position: absolute;
@@ -126,7 +127,7 @@ const MobileMenu = () => {
     <StyledMobileMenu>
       <StyledFullMenu className="full-menu">
         <button className="down" onClick={closeMenu}>
-          X
+          <span className="icon-x-circle"></span>
         </button>
         <ul>
           <li>
@@ -160,32 +161,34 @@ const MobileMenu = () => {
       </StyledFullMenu>
       <StyledMenu>
         <li>
-          <Link activeClassName="active-mobile-panel" to="#">
+          <Link activeClassName="active-mobile-panel" to="/">
             <span className="icon-home"></span>
             Home
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="#">
+          <Link activeClassName="active-mobile-panel" to="/services">
             <span className="icon-briefcase"></span>
             Services
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="#">
+          <Link activeClassName="active-mobile-panel" to="/projects">
             <span className="icon-buildings"></span>
             Projects
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="#">
+          <Link activeClassName="active-mobile-panel" to="/products">
             <span className="icon-brush"></span>
             Products
           </Link>
         </li>
         <li>
-          <span className="icon-vertical-dots"></span>
-          <button onClick={showFullMenu}>Other</button>
+          <button onClick={showFullMenu}>
+            <span className="icon-vertical-dots"></span>
+            Other
+          </button>
         </li>
       </StyledMenu>
     </StyledMobileMenu>

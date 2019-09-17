@@ -203,7 +203,7 @@ export const data = graphql`
         }
       }
     }
-    categoriesHero: file(relativePath: { eq: "homepage/categories-hero.png" }) {
+    categoriesHero: file(relativePath: { eq: "homepage/categories-hero.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 550) {
           ...GatsbyImageSharpFluid

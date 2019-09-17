@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
-import theme from "./theme"
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -251,5 +251,5 @@ footer {
   font-family: ${theme.fonts.secondary};
   font-weight: 600
 }
-`
-export default GlobalStyle
+`;
+export default GlobalStyle;
