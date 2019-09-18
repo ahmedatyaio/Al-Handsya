@@ -260,17 +260,76 @@ export const CategoriesPanel = styled.div`
   }
 `;
 
+export const SectionHeading = styled.div`
+  width: ${props => props.theme.responsive.maxWidth};
+  margin: 10rem auto 5rem;
+  font-family: ${props => props.theme.fonts.primary};
+  max-width: 100%;
+  h2 {
+    color: white;
+    position: relative;
+    width: 35%;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+    &:before {
+      content: '';
+      position: absolute;
+      background: ${props => props.theme.colors.yellow3};
+      width: 100%;
+      height: 3rem;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  .outline {
+    color: white;
+    font-size: 4rem;
+    text-shadow: -1px -1px 0 ${props => props.theme.colors.yellow3},
+      1px -1px 0 ${props => props.theme.colors.yellow3},
+      -1px 1px 0 ${props => props.theme.colors.yellow3},
+      1px 1px 0 ${props => props.theme.colors.yellow3};
+  }
+
+  @supports (
+    (text-stroke: 2px ${props => props.theme.colors.yellow3}) or
+      (-webkit-text-stroke: 2px ${props => props.theme.colors.yellow3})
+  ) {
+    .outline {
+      color: white;
+      -webkit-text-stroke: 2px ${props => props.theme.colors.yellow3};
+      text-stroke: 2px ${props => props.theme.colors.yellow3};
+      text-shadow: none;
+    }
+  }
+  h3 {
+    color: ${props => props.theme.colors.yellow3};
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .outline {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 3.5rem;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+`;
+
 export const OurEquipment = styled.div`
   width: ${props => props.theme.responsive.maxWidth};
-  margin: 10rem auto 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  width: 100%;
   .equipment-block {
     width: 24%;
     background: #000000;
     position: relative;
-    height: 25rem;
+    height: 28rem;
     &:after {
       position: absolute;
       top: 0;
@@ -301,20 +360,22 @@ export const OurEquipment = styled.div`
       height: 100%;
     }
     h2 {
-      bottom: 2rem;
+      bottom: 1.5rem;
       position: absolute;
       text-align: center;
       width: 100%;
       color: #ffffff;
-      font-family: ${props => props.theme.fonts.secondary};
+      font-family: ${props => props.theme.fonts.primary};
       z-index: 10;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
     }
   }
   @media (min-width: 320px) and (max-width: 480px) {
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
+    width: 100%;
     .equipment-block {
       width: 90%;
       flex: 0 0 auto;
@@ -377,7 +438,7 @@ export const AssetsAndEquipment = styled.div`
 
 export const OurProjects = styled.div`
   width: ${props => props.theme.responsive.maxWidth};
-  margin: 10rem auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -480,6 +541,42 @@ export const OurProjects = styled.div`
     }
   }
 `;
+
+export const SeeAll = styled.div`
+  max-width: ${props => props.theme.responsive.maxWidth};
+  margin: 4rem auto 0;
+  .see-all {
+    font-family: ${props => props.theme.fonts.primary};
+    font-size: 1.5rem;
+    color: ${props => props.theme.colors.black};
+    border-radius: 2rem;
+    border: 2px solid ${props => props.theme.colors.yellow};
+    padding: 1rem 3rem;
+  }
+`;
+
+export const ContactUsDetails = styled.div`
+  height: 80vh;
+  margin-top: 10rem;
+  position: relative;
+  .background-img {
+    height: 100%;
+    width: 95%;
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
+  }
+  .deets {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    background: ${props => props.theme.colors.yellow2};
+    width: 40%;
+    margin-right: 2rem;
+    height: 19rem;
+  }
+`;
+
 export const Project = styled.div`
   margin: 0 1rem;
   img {

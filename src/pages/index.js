@@ -7,10 +7,13 @@ import Layout from '../components/layout';
 import OurPartners from '../components/OurPartners';
 
 import {
+  SeeAll,
   TwoSidedBlock,
   CategoriesPanel,
+  SectionHeading,
   OurEquipment,
-  OurProjects
+  OurProjects,
+  ContactUsDetails
 } from '../components/styles/index';
 
 const index = ({ data }) => {
@@ -138,6 +141,10 @@ const index = ({ data }) => {
           </div>
         </CategoriesPanel>
       </div>
+      <SectionHeading>
+        <h2 className="outline">Check out all our</h2>
+        <h3>equipment</h3>
+      </SectionHeading>
       <OurEquipment>
         <div className="equipment-block">
           <Link to="/">
@@ -164,6 +171,13 @@ const index = ({ data }) => {
           </Link>
         </div>
       </OurEquipment>
+      <SeeAll>
+        <Link className="see-all">Check all equipment</Link>
+      </SeeAll>
+      <SectionHeading>
+        <h2 className="outline">Check out all our</h2>
+        <h3>projects</h3>
+      </SectionHeading>
       <OurProjects>
         {data.allProjects.edges.map(project => (
           <div key={project.node.projectName} className="project-block">
@@ -174,6 +188,17 @@ const index = ({ data }) => {
           </div>
         ))}
       </OurProjects>
+      <SeeAll>
+        <Link className="see-all">Check all projects</Link>
+      </SeeAll>
+      <ContactUsDetails>
+        <div className="background-img">
+          <Img fluid={data.contactDetailsImg.childImageSharp.fluid} />
+        </div>
+        <div className="deets">
+          <h2>INFO</h2>
+        </div>
+      </ContactUsDetails>
     </Layout>
   );
 };
@@ -236,15 +261,6 @@ export const data = graphql`
         }
       }
     }
-    contactDetailsImg: file(
-      relativePath: { eq: "homepage/contact-details.png" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     allProjects: allContentfulProjects {
       edges {
         node {
@@ -270,6 +286,15 @@ export const data = graphql`
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
           }
+        }
+      }
+    }
+    contactDetailsImg: file(
+      relativePath: { eq: "homepage/contact-us-details.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

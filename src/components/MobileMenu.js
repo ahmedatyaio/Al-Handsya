@@ -13,7 +13,6 @@ const StyledMobileMenu = styled.div`
 const StyledMenu = styled.ul`
   min-width: 100%;
   display: flex;
-  overflow-x: auto;
   position: fixed;
   padding: 0;
   box-shadow: 0 1px 9px 1px rgba(184, 184, 184, 0.7);
@@ -21,6 +20,7 @@ const StyledMenu = styled.ul`
   bottom: 0;
   margin: 0;
   border-radius: 4px 4px 0 0;
+  z-index: 1000;
   li {
     width: 25%;
     margin: auto;
@@ -56,6 +56,7 @@ const StyledFullMenu = styled.div`
   height: 100vh;
   width: 100%;
   display: none;
+  z-index: 1000;
   .down {
     position: absolute;
     right: 1.5rem;
@@ -65,6 +66,7 @@ const StyledFullMenu = styled.div`
     z-index: 10;
     font-family: ${props => props.theme.fonts.primary};
     font-size: 3rem;
+    background: transparent;
   }
   ul {
     position: absolute;
