@@ -172,7 +172,9 @@ const index = ({ data }) => {
         </div>
       </OurEquipment>
       <SeeAll>
-        <Link className="see-all">Check all equipment</Link>
+        <Link to="/" className="see-all">
+          Check all equipment
+        </Link>
       </SeeAll>
       <SectionHeading>
         <h2 className="outline">Check out all our</h2>
@@ -189,7 +191,9 @@ const index = ({ data }) => {
         ))}
       </OurProjects>
       <SeeAll>
-        <Link className="see-all">Check all projects</Link>
+        <Link to="/" className="see-all">
+          Check all projects
+        </Link>
       </SeeAll>
       <ContactUsDetails>
         <div className="background-img">
@@ -261,7 +265,7 @@ export const data = graphql`
         }
       }
     }
-    allProjects: allContentfulProjects {
+    allProjects: allContentfulProjects(limit: 5) {
       edges {
         node {
           heroImage {
@@ -276,7 +280,7 @@ export const data = graphql`
         }
       }
     }
-    allPartners: allContentfulPartners {
+    allPartners: allContentfulPartners(limit: 10) {
       edges {
         node {
           name

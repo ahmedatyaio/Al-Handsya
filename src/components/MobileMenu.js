@@ -79,10 +79,16 @@ const StyledFullMenu = styled.div`
     li {
       padding: 2.3rem 2rem;
       border-bottom: 1px solid#e6e6e6;
+      position: relative;
       a {
         color: ${props => props.theme.colors.black};
         font-size: 1.3rem;
         font-family: ${props => props.theme.fonts.secondary};
+      }
+      ul {
+        bottom: 0;
+        left: 0;
+        background: #f2f2f2;
       }
     }
   }
@@ -139,19 +145,30 @@ const MobileMenu = () => {
             <Link to="/">About</Link>
           </li>
           <li>
-            <Link to="/">Services</Link>
+            <Link to="/">Services +</Link>
+            <ul>
+              <li>
+                <a href="#">hey</a>
+              </li>
+              <li>
+                <a href="#">ay</a>
+              </li>
+              <li>
+                <a href="#">hello</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <Link to="/">Projects</Link>
+            <Link to="/">Projects +</Link>
           </li>
           <li>
-            <Link to="/">Products</Link>
+            <Link to="/">Products +</Link>
           </li>
           <li>
-            <Link to="/">Kryton</Link>
+            <Link to="/">Kryton +</Link>
           </li>
           <li>
-            <Link to="/">Distributors</Link>
+            <Link to="/">Distributors +</Link>
           </li>
           <li>
             <Link to="/">Careers</Link>
