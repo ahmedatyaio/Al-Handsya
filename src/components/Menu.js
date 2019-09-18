@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import $ from "jquery"
+import React, { useEffect } from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import $ from 'jquery';
 
 const Nav = styled.nav`
   font-family: ${props => props.theme.fonts.primary};
@@ -9,7 +9,7 @@ const Nav = styled.nav`
     display: flex;
     flex-direction: column-reverse;
   }
-`
+`;
 
 // const MenuTop = styled.div`
 //   width: 100%;
@@ -73,7 +73,7 @@ const Logo = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     justify-content: center;
   }
-`
+`;
 
 // const MobileMenuButton = styled.button`
 //   background: transparent;
@@ -125,7 +125,7 @@ const ContactDetails = styled.div`
     width: 100%;
     padding: 1.5rem 0;
   }
-`
+`;
 
 // const MenuLinks = styled.div`
 //   background: ${props => props.theme.colors.yellow};
@@ -187,7 +187,7 @@ const PrimaryMenu = styled.div`
       justify-content: center;
     }
   }
-`
+`;
 const MenuLinks = styled.ul`
   display: flex;
   justify-content: space-around;
@@ -233,12 +233,12 @@ const MenuLinks = styled.ul`
   @media (max-width: 1200px) {
     display: none;
   }
-`
+`;
 
 const Menu = () => {
   const onDropdownTrigger = name => {
-    $(`.${name}-dropdown`).slideToggle()
-  }
+    $(`.${name}-dropdown`).slideToggle();
+  };
 
   // click(function() {
   //   console.log($(this))
@@ -249,13 +249,13 @@ const Menu = () => {
   // })
 
   useEffect(() => {
-    $(document).on("click", e => {
-      const dropdown = $(".dropdown-menu")
-      if (e.target.id !== "dropdown") {
-        dropdown.slideUp(200)
+    $(document).on('click', e => {
+      const dropdown = $('.dropdown-menu');
+      if (e.target.id !== 'dropdown') {
+        dropdown.slideUp(200);
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <Nav>
@@ -285,14 +285,14 @@ const Menu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" activeClassName="current-page">
+              <Link to="/" activeClassName="current-page">
                 About
               </Link>
             </li>
             <li>
               <button
                 id="dropdown"
-                onClick={() => onDropdownTrigger("services")}
+                onClick={() => onDropdownTrigger('services')}
               >
                 Services +
               </button>
@@ -314,7 +314,7 @@ const Menu = () => {
             <li>
               <button
                 id="dropdown"
-                onClick={() => onDropdownTrigger("projects")}
+                onClick={() => onDropdownTrigger('projects')}
               >
                 Projects +
               </button>
@@ -330,7 +330,7 @@ const Menu = () => {
             <li>
               <button
                 id="dropdown"
-                onClick={() => onDropdownTrigger("products")}
+                onClick={() => onDropdownTrigger('products')}
               >
                 Products +
               </button>
@@ -348,12 +348,12 @@ const Menu = () => {
                   <Link to="/">Olin - France (Sealants & Adhesives)</Link>
                 </li>
                 <li>
-                  <Link to="/contact-us">Contact Us</Link>
+                  <Link to="/">Contact Us</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <button id="dropdown" onClick={() => onDropdownTrigger("kryton")}>
+              <button id="dropdown" onClick={() => onDropdownTrigger('kryton')}>
                 Kryton +
               </button>
               <ul className="dropdown-menu kryton-dropdown">
@@ -374,7 +374,7 @@ const Menu = () => {
             <li>
               <button
                 id="dropdown"
-                onClick={() => onDropdownTrigger("distributors")}
+                onClick={() => onDropdownTrigger('distributors')}
               >
                 Distributors +
               </button>
@@ -392,17 +392,17 @@ const Menu = () => {
                   <Link to="/">Tanta Distributors</Link>
                 </li>
                 <li>
-                  <Link to="/contact-us">Become a Distributor?</Link>
+                  <Link to="/">Become a Distributor?</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="/careers" activeClassName="current-page">
+              <Link to="/" activeClassName="current-page">
                 Careers
               </Link>
             </li>
             <li>
-              <Link to="/contact-us" activeClassName="current-page">
+              <Link to="/" activeClassName="current-page">
                 Contact Us
               </Link>
             </li>
@@ -413,7 +413,7 @@ const Menu = () => {
         </div>
       </PrimaryMenu>
     </Nav>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

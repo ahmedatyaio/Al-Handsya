@@ -169,19 +169,19 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/services">
+          <Link activeClassName="active-mobile-panel" to="/">
             <span className="icon-briefcase"></span>
             Services
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/projects">
+          <Link activeClassName="active-mobile-panel" to="/">
             <span className="icon-buildings"></span>
             Projects
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/products">
+          <Link activeClassName="active-mobile-panel" to="/">
             <span className="icon-brush"></span>
             Products
           </Link>
