@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import BackgroundImg from 'gatsby-background-image';
 
 import Layout from '../components/layout';
+import HeaderCarousel from '../components/HeaderCarousel';
 import OurPartners from '../components/OurPartners';
 
 import {
@@ -19,7 +20,7 @@ import {
 const index = ({ data }) => {
   return (
     <Layout>
-      {/* <HeaderCarousel photo={data.headerOne.childImageSharp.fluid} /> */}
+      <HeaderCarousel />
       <OurPartners allPartners={data.allPartners} />
       <div className="container">
         <TwoSidedBlock mission>
@@ -209,13 +210,6 @@ const index = ({ data }) => {
 
 export const data = graphql`
   {
-    headerOne: file(relativePath: { eq: "homepage/header.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     missionImg: file(relativePath: { eq: "homepage/mission.png" }) {
       childImageSharp {
         fluid(maxWidth: 850) {

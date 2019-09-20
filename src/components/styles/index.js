@@ -551,7 +551,7 @@ export const SeeAll = styled.div`
     color: ${props => props.theme.colors.black};
     border-radius: 2rem;
     border: 2px solid ${props => props.theme.colors.yellow};
-    padding: 1rem 3rem;
+    padding: 1.2rem 4rem;
   }
 `;
 

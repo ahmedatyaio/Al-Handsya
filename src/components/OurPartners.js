@@ -1,11 +1,11 @@
-import React from "react"
-import Slider from "react-slick"
-import Img from "gatsby-image"
+import React from 'react';
+import Slider from 'react-slick';
+import Img from 'gatsby-image';
 
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import { OurPartners } from "./styles/index"
+import { OurPartners } from './styles/index';
 
 const OurPartnersComponent = ({ allPartners }) => {
   const settings = {
@@ -23,26 +23,26 @@ const OurPartnersComponent = ({ allPartners }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-        },
+          infinite: true
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
-        },
+          initialSlide: 2
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <OurPartners>
@@ -54,13 +54,13 @@ const OurPartnersComponent = ({ allPartners }) => {
                 <div className="item" key={partner.node.logo.title}>
                   <Img fluid={partner.node.logo.fluid} />
                 </div>
-              )
+              );
             })}
           </Slider>
         </div>
       </div>
     </OurPartners>
-  )
-}
+  );
+};
 
-export default OurPartnersComponent
+export default OurPartnersComponent;
