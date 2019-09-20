@@ -77,17 +77,17 @@ class HeaderCarousel extends Component {
               button {
                 cursor: pointer;
                 border: 0;
-                font-size: 1rem;
+                font-size: 1.8rem;
               }
               .next {
                 background: ${props => props.theme.colors.yellow};
                 color: ${props => props.theme.colors.black};
-                padding: 1.2rem 3rem;
+                padding: 1rem 3rem;
               }
               .previous {
                 background: ${props => props.theme.colors.black};
                 color: white;
-                padding: 1.2rem 1.5rem;
+                padding: 1rem 1.5rem;
                 transition: 0.5s padding;
                 &:hover {
                   padding: 1.2rem 2.5rem;
@@ -161,10 +161,10 @@ class HeaderCarousel extends Component {
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
                     <button className="button previous" onClick={this.previous}>
-                      &#8249;
+                      <span className="icon-chevron-left"></span>
                     </button>
                     <button className="button next" onClick={this.next}>
-                      &#8250;
+                      <span className="icon-chevron-right"></span>
                     </button>
                   </div>
                 </div>
@@ -179,10 +179,10 @@ class HeaderCarousel extends Component {
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
                     <button className="button previous" onClick={this.previous}>
-                      &#8249;
+                      <span className="icon-chevron-left"></span>
                     </button>
                     <button className="button next" onClick={this.next}>
-                      &#8250;
+                      <span className="icon-chevron-right"></span>
                     </button>
                   </div>
                 </div>

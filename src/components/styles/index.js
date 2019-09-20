@@ -379,6 +379,7 @@ export const OurEquipment = styled.div`
     .equipment-block {
       width: 90%;
       flex: 0 0 auto;
+      margin-right: 1rem;
     }
   }
 `;
@@ -534,6 +535,7 @@ export const OurProjects = styled.div`
     .project-block {
       width: 90% !important;
       flex: 0 0 auto;
+      margin-right: 1rem;
       &:nth-child(4),
       &:nth-child(5) {
         height: 30rem;
@@ -552,6 +554,9 @@ export const SeeAll = styled.div`
     border-radius: 2rem;
     border: 2px solid ${props => props.theme.colors.yellow};
     padding: 1.2rem 4rem;
+    @media (min-width: 320px) and (max-width: 480px) {
+      margin-left: 2rem;
+    }
   }
 `;
 

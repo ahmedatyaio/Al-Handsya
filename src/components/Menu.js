@@ -118,6 +118,9 @@ const ContactDetails = styled.div`
         color: #000000;
       }
     }
+    @media (max-width: 360px) {
+      font-size: 1.1rem;
+    }
   }
   @media (max-width: 1024px) {
     justify-content: center;
@@ -211,6 +214,11 @@ const MenuLinks = styled.ul`
     }
     button {
       cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      span {
+        margin-left: 0.2rem;
+      }
     }
     .dropdown-menu {
       padding: 0;
@@ -239,14 +247,6 @@ const Menu = () => {
   const onDropdownTrigger = name => {
     $(`.${name}-dropdown`).slideToggle();
   };
-
-  // click(function() {
-  //   console.log($(this))
-  //   var dropdown = $(".dropdown-menu")
-  //   if (dropdown.is(":visible")) {
-  //     dropdown.slideUp(200)
-  //   }
-  // })
 
   useEffect(() => {
     $(document).on('click', e => {
@@ -294,7 +294,7 @@ const Menu = () => {
                 id="dropdown"
                 onClick={() => onDropdownTrigger('services')}
               >
-                Services +
+                Services <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu services-dropdown">
                 <li>
@@ -316,7 +316,7 @@ const Menu = () => {
                 id="dropdown"
                 onClick={() => onDropdownTrigger('projects')}
               >
-                Projects +
+                Projects <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu projects-dropdown">
                 <li>
@@ -332,7 +332,7 @@ const Menu = () => {
                 id="dropdown"
                 onClick={() => onDropdownTrigger('products')}
               >
-                Products +
+                Products <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu products-dropdown">
                 <li>
@@ -354,7 +354,7 @@ const Menu = () => {
             </li>
             <li>
               <button id="dropdown" onClick={() => onDropdownTrigger('kryton')}>
-                Kryton +
+                Kryton <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu kryton-dropdown">
                 <li>
@@ -376,7 +376,7 @@ const Menu = () => {
                 id="dropdown"
                 onClick={() => onDropdownTrigger('distributors')}
               >
-                Distributors +
+                Distributors <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu distributors-dropdown">
                 <li>

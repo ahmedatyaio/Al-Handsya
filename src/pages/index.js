@@ -224,7 +224,11 @@ export const data = graphql`
         }
       }
     }
-    categoriesHero: file(relativePath: { eq: "homepage/categories-hero.jpg" }) {
+    categoriesHero: file(
+      relativePath: {
+        eq: "homepage/aerial-shot-architecture-buildings-2383277.jpg"
+      }
+    ) {
       childImageSharp {
         fluid(maxWidth: 550) {
           ...GatsbyImageSharpFluid
