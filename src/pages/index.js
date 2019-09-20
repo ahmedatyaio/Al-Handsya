@@ -13,8 +13,7 @@ import {
   CategoriesPanel,
   SectionHeading,
   OurEquipment,
-  OurProjects,
-  ContactUsDetails
+  OurProjects
 } from '../components/styles/index';
 
 const index = ({ data }) => {
@@ -196,14 +195,14 @@ const index = ({ data }) => {
           Check all projects
         </Link>
       </SeeAll>
-      <ContactUsDetails>
+      {/* <ContactUsDetails>
         <div className="background-img">
           <Img fluid={data.contactDetailsImg.childImageSharp.fluid} />
         </div>
         <div className="deets">
           <h2>INFO</h2>
         </div>
-      </ContactUsDetails>
+      </ContactUsDetails> */}
     </Layout>
   );
 };
