@@ -109,7 +109,7 @@ class HeaderCarousel extends Component {
           }
         }
       }
-      @media (min-width: 320px) and (max-width: 480px) {
+      @media (max-width: 480px) {
         .carousel-item .content {
           width: 100%;
           .photo {
@@ -120,6 +120,19 @@ class HeaderCarousel extends Component {
             margin: auto;
             h2 {
               font-size: 5rem;
+            }
+          }
+        }
+      }
+      @media (min-width: 320px) and (max-width: 360px) {
+        .carousel-item {
+          height: 65vh;
+          .content .heading-typo {
+            h2 {
+              font-size: 4.5rem;
+            }
+            .slick-btns {
+              margin-top: 3rem;
             }
           }
         }
@@ -161,7 +174,7 @@ class HeaderCarousel extends Component {
           <CarouselItemTwo className="carousel-item">
             <div className="content">
               <div className="heading-typo">
-                <h2>General Construction Department</h2>
+                <h2>Speciality Construction Department</h2>
                 <div>
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
