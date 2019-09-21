@@ -166,7 +166,7 @@ export const TwoSidedBlock = styled.div`
 export const CategoriesPanel = styled.div`
   margin-top: 10rem;
   display: flex;
-  width: 95%;
+  width: 100%;
   margin: 10rem auto 0;
   .categories-hero {
     width: 35%;
@@ -326,10 +326,10 @@ export const OurEquipment = styled.div`
   display: flex;
   justify-content: space-around;
   .equipment-block {
-    width: 24%;
+    width: 24.5%;
     background: #000000;
     position: relative;
-    height: 28rem;
+    height: 20rem;
     &:after {
       position: absolute;
       top: 0;
@@ -376,6 +376,7 @@ export const OurEquipment = styled.div`
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
+    margin-left: 2rem;
     .equipment-block {
       width: 90%;
       flex: 0 0 auto;
@@ -532,6 +533,7 @@ export const OurProjects = styled.div`
     overflow-y: hidden;
     flex-wrap: nowrap;
     width: 100%;
+    margin-left: 2rem;
     .project-block {
       width: 90% !important;
       flex: 0 0 auto;

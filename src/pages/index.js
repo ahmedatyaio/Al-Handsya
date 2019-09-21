@@ -223,42 +223,38 @@ export const data = graphql`
         }
       }
     }
-    categoriesHero: file(
-      relativePath: {
-        eq: "homepage/aerial-shot-architecture-buildings-2383277.jpg"
-      }
-    ) {
+    categoriesHero: file(relativePath: { eq: "homepage/categories.png" }) {
       childImageSharp {
-        fluid(maxWidth: 550) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 410) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    waterproofImg: file(relativePath: { eq: "homepage/waterproof.png" }) {
+    waterproofImg: file(relativePath: { eq: "homepage/waterproof.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    concreteImg: file(relativePath: { eq: "homepage/concrete.png" }) {
+    concreteImg: file(relativePath: { eq: "homepage/concrete.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    safetyImg: file(relativePath: { eq: "homepage/safety-tools.png" }) {
+    safetyImg: file(relativePath: { eq: "homepage/safety-tools.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    measurementImg: file(relativePath: { eq: "homepage/measurement.png" }) {
+    measurementImg: file(relativePath: { eq: "homepage/measurement.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
