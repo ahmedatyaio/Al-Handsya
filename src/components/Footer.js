@@ -84,7 +84,6 @@ const StyledFooter = styled.footer`
         margin: auto;
         .block {
           width: 50%;
-          text-align: center;
         }
       }
     }
@@ -96,13 +95,13 @@ const FooterComponent = () => {
     <StyledFooter>
       <div className="left">
         <Logo className="footer-logo">
-          <a>
+          <Link to="/">
             <span className="icon-logo"></span>
             <div>
               <h1>Al-Handsya</h1>
               <p>For Construction and Real Estate</p>
             </div>
-          </a>
+          </Link>
         </Logo>
         <h3>
           6 Al Nile Al Abyad St, Lebanon Sq, Mohandseen - Giza, Arab Republic of
