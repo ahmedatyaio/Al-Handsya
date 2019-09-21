@@ -309,6 +309,7 @@ export const SectionHeading = styled.div`
     margin-top: 1rem;
   }
   @media (min-width: 320px) and (max-width: 480px) {
+    margin-bottom: 3rem;
     .outline {
       width: 90%;
       margin: 0 auto;
@@ -375,12 +376,11 @@ export const OurEquipment = styled.div`
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 100%;
-    margin-left: 2rem;
+    width: 95%;
     .equipment-block {
-      width: 90%;
+      width: 85%;
       flex: 0 0 auto;
-      margin-right: 1rem;
+      margin-right: 0.6rem;
     }
   }
 `;
@@ -532,15 +532,15 @@ export const OurProjects = styled.div`
     overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
-    width: 100%;
-    margin-left: 2rem;
+    width: 95%;
     .project-block {
-      width: 90% !important;
+      width: 85% !important;
       flex: 0 0 auto;
-      margin-right: 1rem;
+      margin-right: 0.6rem;
+      height: 25rem;
       &:nth-child(4),
       &:nth-child(5) {
-        height: 30rem;
+        height: 25rem;
       }
     }
   }
