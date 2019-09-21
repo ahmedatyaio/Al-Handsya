@@ -29,9 +29,9 @@ const Template = ({ children }) => {
           <div className="siteContent">
             <Menu />
             {children}
-            <MobileMenu />
           </div>
           <Footer />
+          <MobileMenu />
         </>
       </ThemeProvider>
       <GlobalStyle />

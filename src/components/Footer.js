@@ -53,13 +53,49 @@ const StyledFooter = styled.footer`
     margin-top: 0.8rem;
     color: #848282;
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+    margin-top: 10rem;
+    .left {
+      width: 90%;
+      margin: auto;
+      .footer-logo {
+        h1 {
+          margin-top: 2rem;
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+      a {
+        display: block;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    .right {
+      width: 100%;
+      margin-top: 4rem;
+      .footer-blocks {
+        width: 90%;
+        flex-wrap: wrap;
+        margin: auto;
+        .block {
+          width: 50%;
+          text-align: center;
+        }
+      }
+    }
+  }
 `;
 
 const FooterComponent = () => {
   return (
     <StyledFooter>
       <div className="left">
-        <Logo>
+        <Logo className="footer-logo">
           <a>
             <span className="icon-logo"></span>
             <div>

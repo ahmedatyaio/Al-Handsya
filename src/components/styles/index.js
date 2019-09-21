@@ -622,6 +622,21 @@ export const ContactUsDetails = styled.div`
       }
     }
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-top: 0;
+    height: 45vh;
+    .background-img {
+      display: none;
+    }
+    .deets {
+      margin-right: 0;
+      width: 100%;
+      height: 100%;
+      .content .contact h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
 `;
 
 export const Project = styled.div`
