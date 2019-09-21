@@ -13,7 +13,8 @@ import {
   CategoriesPanel,
   SectionHeading,
   OurEquipment,
-  OurProjects
+  OurProjects,
+  ContactUsDetails
 } from '../components/styles/index';
 
 const index = ({ data }) => {
@@ -195,14 +196,28 @@ const index = ({ data }) => {
           Check all projects
         </Link>
       </SeeAll>
-      {/* <ContactUsDetails>
+      <ContactUsDetails>
         <div className="background-img">
           <Img fluid={data.contactDetailsImg.childImageSharp.fluid} />
         </div>
         <div className="deets">
-          <h2>INFO</h2>
+          <div className="content">
+            <p>Let's talk</p>
+            <h2>Contact Us</h2>
+            <div className="contact address">
+              <span className="icon-map"></span>
+              <h3>
+                6 Al Nile Al Abyad St, Lebanon Sq, Mohandseen - Giza, Arab
+                Republic of Egypt.
+              </h3>
+            </div>
+            <div className="contact email">
+              <span className="icon-mail-send"></span>
+              <h3>Alhandsya@Alhandsya.com</h3>
+            </div>
+          </div>
         </div>
-      </ContactUsDetails> */}
+      </ContactUsDetails>
     </Layout>
   );
 };
@@ -291,7 +306,7 @@ export const data = graphql`
     ) {
       childImageSharp {
         fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

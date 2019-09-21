@@ -31,7 +31,7 @@ const Nav = styled.nav`
 //   }
 // `
 
-const Logo = styled.div`
+export const Logo = styled.div`
   font-size: 2rem;
   a {
     text-decoration: none;

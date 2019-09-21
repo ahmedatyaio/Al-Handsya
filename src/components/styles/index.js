@@ -563,24 +563,64 @@ export const SeeAll = styled.div`
 `;
 
 export const ContactUsDetails = styled.div`
-  height: 80vh;
+  height: 70vh;
   margin-top: 10rem;
   position: relative;
   .background-img {
     height: 100%;
-    width: 95%;
+    width: 100%;
     .gatsby-image-wrapper {
       height: 100%;
+      picture {
+        img {
+          object-position: top !important;
+        }
+      }
     }
   }
   .deets {
     position: absolute;
-    top: 35%;
+    top: 20%;
     right: 0;
     background: ${props => props.theme.colors.yellow2};
-    width: 40%;
-    margin-right: 2rem;
-    height: 19rem;
+    width: 50%;
+    margin-right: 2.5rem;
+    height: 60%;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      color: white;
+      p {
+        margin-bottom: 0;
+        font-size: 2rem;
+        font-family: ${props => props.theme.fonts.secondary};
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        font-size: 4rem;
+        font-family: ${props => props.theme.fonts.primary};
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        font-family: ${props => props.theme.fonts.secondary};
+        color: #333333;
+        span {
+          font-size: 4rem;
+          color: #222222;
+        }
+        h3 {
+          margin-left: 1rem;
+          font-size: 1.6rem;
+          width: 80%;
+        }
+      }
+    }
   }
 `;
 
