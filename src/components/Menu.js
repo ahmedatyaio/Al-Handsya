@@ -5,7 +5,7 @@ import $ from 'jquery';
 
 const Nav = styled.nav`
   font-family: ${props => props.theme.fonts.primary};
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -87,7 +87,7 @@ const ContactDetails = styled.div`
       font-size: 1.1rem;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     justify-content: center;
     border-bottom: 1px solid#f1f1f1;
     width: 100%;
@@ -108,7 +108,7 @@ const PrimaryMenu = styled.div`
       width: 90%;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     border-bottom: 1px solid#f1f1f1;
     box-shadow: none;
     padding: 1.5rem;
@@ -170,7 +170,7 @@ const MenuLinks = styled.ul`
       font-size: 1.4rem;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     display: none;
   }
 `;

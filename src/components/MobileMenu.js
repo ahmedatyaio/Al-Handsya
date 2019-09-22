@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const StyledMobileMenu = styled.div`
   min-width: 100%;
-  @media (min-width: 769px) {
+  @media (min-width: 835px) {
     display: none;
   }
 `;
@@ -86,7 +86,7 @@ const StyledFullMenu = styled.div`
       }
     }
   }
-  @media (width: 768px) {
+  @media (min-width: 768px) and (max-width: 834px) {
     ul {
       bottom: 7rem;
     }

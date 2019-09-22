@@ -90,6 +90,25 @@ export const TwoSidedBlock = styled.div`
       }
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .block-title {
+      h6 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 2.7rem;
+      }
+    }
+    .block-content {
+      font-size: 1.4rem;
+      a {
+        padding: 1.4rem 4rem;
+      }
+    }
+    .block-image {
+      width: 58%;
+    }
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     flex-direction: ${props => (props.mission ? 'column-reverse' : 'column')};
     margin-top: ${props => (props.mission ? '0' : '4rem')};
@@ -184,7 +203,7 @@ export const CategoriesPanel = styled.div`
       width: 75%;
     }
   }
-  @media (width: 768px) {
+  @media (min-width: 768px) and (max-width: 834px) {
     .categories .content .category-blocks .block {
       width: 41%;
       h3 {
@@ -269,7 +288,7 @@ export const SectionHeading = styled.div`
       width: 40%;
     }
   }
-  @media (width: 768px) {
+  @media (min-width: 768px) and (max-width: 834px) {
     h2 {
       width: 55%;
     }
@@ -346,7 +365,7 @@ export const OurEquipment = styled.div`
       margin-bottom: 2rem;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
@@ -462,7 +481,7 @@ export const OurProjects = styled.div`
       }
     }
   }
-  @media (width: 768px) {
+  @media (max-width: 834px) {
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
@@ -480,7 +499,7 @@ export const OurProjects = styled.div`
   }
   @media (min-width: 320px) and (max-width: 480px) {
     .project-block {
-      width: 85%;
+      width: 85% !important;
     }
   }
 `;

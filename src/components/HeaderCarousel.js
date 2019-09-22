@@ -120,7 +120,7 @@ class HeaderCarousel extends Component {
           }
         }
       }
-      @media (width: 768px) {
+      @media (min-width: 768px) and (max-width: 834px) {
         .carousel-item .content .heading-typo h2 {
           font-size: 4.2rem;
         }
