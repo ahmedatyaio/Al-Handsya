@@ -5,31 +5,11 @@ import $ from 'jquery';
 
 const Nav = styled.nav`
   font-family: ${props => props.theme.fonts.primary};
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
   }
 `;
-
-// const MenuTop = styled.div`
-//   width: 100%;
-//   color: ${props => props.theme.colors.black};
-//   margin-bottom: 1rem;
-//   padding: 2.5rem 0;
-//   font-family: $font1;
-//   font-weight: bold;
-//   box-shadow: 0px 3px 8px 0px rgba(184, 184, 184, 0.3);
-// `
-
-// const MenuTopContent = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   max-width: ${props => props.theme.sizes.maxWidth};
-//   margin: 0 auto;
-//   @media (min-width: 320px) and (max-width: 480px) {
-//     justify-content: space-evenly;
-//   }
-// `
 
 export const Logo = styled.div`
   font-size: 2rem;
@@ -75,28 +55,13 @@ export const Logo = styled.div`
   }
 `;
 
-// const MobileMenuButton = styled.button`
-//   background: transparent;
-//   font-size: 3rem;
-//   border: 0;
-//   display: none;
-//   span {
-//     &:before {
-//       color: ${props => props.theme.colors.yellow};
-//     }
-//   }
-//   @media (min-width: 320px) and (max-width: 480px) {
-//     display: block;
-//   }
-// `
-
 const ContactDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 1rem;
   color: #5c5757;
-  width: ${props => props.theme.responsive.maxWidth};
+  max-width: ${props => props.theme.responsive.maxWidth};
   margin: 0 auto;
   div {
     font-size: 1.2rem;
@@ -118,56 +83,17 @@ const ContactDetails = styled.div`
         color: #000000;
       }
     }
-    @media (max-width: 360px) {
+    @media (max-width: 375px) {
       font-size: 1.1rem;
     }
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     justify-content: center;
     border-bottom: 1px solid#f1f1f1;
     width: 100%;
     padding: 1.5rem 0;
   }
 `;
-
-// const MenuLinks = styled.div`
-//   background: ${props => props.theme.colors.yellow};
-// `
-
-// const MenuLinksContent = styled.ul`
-//   max-width: ${props => props.theme.sizes.maxWidth};
-//   margin: 0 auto;
-//   padding: 0;
-//   display: flex;
-//   a {
-//     text-decoration: none;
-//     font-weight: 600;
-//     color: #000000;
-//     font-size: 1.3rem;
-//     padding: 2.2rem;
-//     &:hover {
-//       background: #fdd835;
-//     }
-//   }
-//   li {
-//     font-family: ${props => props.theme.fonts.secondary};
-//   }
-//   @media (min-width: 320px) and (max-width: 480px) {
-//     flex-direction: column;
-//     display: none;
-//     li {
-//       padding: 1.5rem 2rem;
-//       border-bottom: 1px solid#f1de39;
-//     }
-//   }
-// `
-// const SecondaryMenu = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 1rem;
-//   width: ${props => props.theme.responsive.maxWidth};
-//   margin: 0 auto;
-// `
 
 const PrimaryMenu = styled.div`
   box-shadow: 0px 3px 8px 0px rgba(184, 184, 184, 0.3);
@@ -176,13 +102,13 @@ const PrimaryMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: ${props => props.theme.responsive.maxWidth};
+    max-width: ${props => props.theme.responsive.maxWidth};
     margin: 0 auto;
     @media (max-width: 1200px) {
       width: 90%;
     }
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     border-bottom: 1px solid#f1f1f1;
     box-shadow: none;
     padding: 1.5rem;
@@ -239,6 +165,12 @@ const MenuLinks = styled.ul`
     }
   }
   @media (max-width: 1200px) {
+    width: 70%;
+    li a {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 768px) {
     display: none;
   }
 `;

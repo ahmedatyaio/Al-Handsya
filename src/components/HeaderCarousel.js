@@ -27,7 +27,7 @@ class HeaderCarousel extends Component {
       infinite: true,
       fade: true,
       speed: 500,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
       slidesToShow: 1,
       slidesToScroll: 1
@@ -40,7 +40,7 @@ class HeaderCarousel extends Component {
         height: 75vh;
         outline: 0;
         .content {
-          width: ${props => props.theme.responsive.maxWidth};
+          max-width: ${props => props.theme.responsive.maxWidth};
           margin: 0 auto;
           height: 100%;
           display: flex;
@@ -107,6 +107,22 @@ class HeaderCarousel extends Component {
               object-fit: contain;
             }
           }
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .carousel-item {
+          height: 60vh;
+          .content {
+            width: 90%;
+            .heading-typo h2 {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+      @media (width: 768px) {
+        .carousel-item .content .heading-typo h2 {
+          font-size: 4.2rem;
         }
       }
       @media (max-width: 480px) {

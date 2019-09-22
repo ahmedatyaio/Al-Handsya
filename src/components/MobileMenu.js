@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const StyledMobileMenu = styled.div`
   min-width: 100%;
-  @media (min-width: 1025px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `;
@@ -84,6 +84,11 @@ const StyledFullMenu = styled.div`
         font-size: 1.3rem;
         font-family: ${props => props.theme.fonts.secondary};
       }
+    }
+  }
+  @media (width: 768px) {
+    ul {
+      bottom: 7rem;
     }
   }
 `;

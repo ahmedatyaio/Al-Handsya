@@ -176,6 +176,22 @@ export const CategoriesPanel = styled.div`
       }
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .categories-hero {
+      width: 25%;
+    }
+    .categories {
+      width: 75%;
+    }
+  }
+  @media (width: 768px) {
+    .categories .content .category-blocks .block {
+      width: 41%;
+      h3 {
+        font-size: 1.35rem;
+      }
+    }
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     flex-direction: column;
     .categories-hero {
@@ -201,10 +217,10 @@ export const CategoriesPanel = styled.div`
 `;
 
 export const SectionHeading = styled.div`
-  width: ${props => props.theme.responsive.maxWidth};
+  width: 95%;
+  max-width: ${props => props.theme.responsive.maxWidth};
   margin: 10rem auto 5rem;
   font-family: ${props => props.theme.fonts.primary};
-  max-width: 100%;
   h2 {
     color: white;
     position: relative;
@@ -248,6 +264,16 @@ export const SectionHeading = styled.div`
     font-size: 4rem;
     margin-top: 1rem;
   }
+  @media (width: 1024px) {
+    h2 {
+      width: 40%;
+    }
+  }
+  @media (width: 768px) {
+    h2 {
+      width: 55%;
+    }
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     margin-bottom: 3rem;
     .outline {
@@ -262,7 +288,8 @@ export const SectionHeading = styled.div`
 `;
 
 export const OurEquipment = styled.div`
-  width: ${props => props.theme.responsive.maxWidth};
+  width: 95%;
+  max-width: ${props => props.theme.responsive.maxWidth};
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -312,21 +339,33 @@ export const OurEquipment = styled.div`
       line-height: 2.5rem;
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (width: 1024px) {
+    flex-wrap: wrap;
+    .equipment-block {
+      width: 48%;
+      margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 95%;
     .equipment-block {
-      width: 85%;
       flex: 0 0 auto;
       margin-right: 0.6rem;
+      width: 40%;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .equipment-block {
+      width: 85%;
     }
   }
 `;
 
 export const OurProjects = styled.div`
-  width: ${props => props.theme.responsive.maxWidth};
+  width: 95%;
+  max-width: ${props => props.theme.responsive.maxWidth};
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -414,14 +453,22 @@ export const OurProjects = styled.div`
       margin-left: 2rem;
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (width: 1024px) {
+    .project-block {
+      height: 25rem;
+      &:nth-child(4),
+      &:nth-child(5) {
+        height: 30rem;
+      }
+    }
+  }
+  @media (width: 768px) {
     justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
-    width: 95%;
     .project-block {
-      width: 85% !important;
+      width: 40% !important;
       flex: 0 0 auto;
       margin-right: 0.6rem;
       height: 25rem;
@@ -429,6 +476,11 @@ export const OurProjects = styled.div`
       &:nth-child(5) {
         height: 25rem;
       }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .project-block {
+      width: 85%;
     }
   }
 `;
@@ -443,8 +495,14 @@ export const SeeAll = styled.div`
     border-radius: 2rem;
     border: 2px solid ${props => props.theme.colors.yellow};
     padding: 1.2rem 4rem;
-    @media (min-width: 320px) and (max-width: 480px) {
+    transition: 0.2s all ease-in-out;
+    @media (max-width: 1024px) {
       margin-left: 2rem;
+    }
+    &:hover {
+      background: ${props => props.theme.colors.yellow3};
+      border-color: ${props => props.theme.colors.yellow3};
+      color: white;
     }
   }
 `;
@@ -507,6 +565,14 @@ export const ContactUsDetails = styled.div`
           width: 80%;
         }
       }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 40vh;
+  }
+  @media (width: 768px) {
+    .deets .content .contact h3 {
+      font-size: 1.3rem;
     }
   }
   @media (min-width: 320px) and (max-width: 480px) {

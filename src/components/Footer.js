@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Logo } from './Menu';
 
 const StyledFooter = styled.footer`
+  width: 90%;
   max-width: ${props => props.theme.responsive.maxWidth};
   margin: 8rem auto;
   display: flex;
