@@ -197,6 +197,9 @@ template {
 [hidden] {
  display: none;
 }
+.open-full-mobile-menu {
+  transform: translate3d(0, 0, 0) !important;
+}
 
 .container {
   max-width: 1150px;

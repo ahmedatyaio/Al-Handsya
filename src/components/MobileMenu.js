@@ -3,10 +3,54 @@ import { Link } from 'gatsby';
 import $ from 'jquery';
 import styled from 'styled-components';
 
-const StyledMobileMenu = styled.div`
-  min-width: 100%;
+const StyledMobileMnu = styled.div`
+  background: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow-y: auto;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .close {
+    background: ${props => props.theme.colors.black};
+    border: 0;
+    color: #ffffff;
+    padding: 1.2rem;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    font-size: 2.5rem;
+  }
   @media (min-width: 835px) {
     display: none;
+  }
+`;
+
+const StyledFullMenu = styled.ul`
+  padding: 0;
+  height: 90%;
+  li {
+    a,
+    h2 {
+      font-size: 1.6rem;
+      color: #000000;
+      font-family: ${props => props.theme.fonts.secondary};
+      margin: 2.5rem 0;
+      display: inline-block;
+    }
+    ul {
+      padding: 0;
+      li a {
+        color: #666666;
+        font-size: 1.4rem;
+        margin: 1rem 0;
+      }
+    }
   }
 `;
 
@@ -48,124 +92,127 @@ const StyledMenu = styled.ul`
   }
 `;
 
-const StyledFullMenu = styled.div`
-  background: rgba(51, 51, 51, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  display: none;
-  z-index: 1000;
-  .down {
-    position: absolute;
-    right: 1.5rem;
-    top: 3rem;
-    border: 0;
-    border-radius: 10rem;
-    z-index: 10;
-    font-family: ${props => props.theme.fonts.primary};
-    font-size: 3rem;
-    background: transparent;
-  }
-  ul {
-    position: absolute;
-    bottom: 10vh;
-    margin: 0;
-    padding: 0;
-    width: 0;
-    overflow-y: scroll;
-    background: #f9f9f9;
-    li {
-      padding: 2.3rem 2rem;
-      border-bottom: 1px solid#e6e6e6;
-      a {
-        color: ${props => props.theme.colors.black};
-        font-size: 1.3rem;
-        font-family: ${props => props.theme.fonts.secondary};
-      }
-    }
-  }
-  @media (min-width: 768px) and (max-width: 834px) {
-    ul {
-      bottom: 7rem;
-    }
-  }
-`;
-
 const MobileMenu = () => {
   const showFullMenu = () => {
-    const selectedEl = $('.full-menu ul');
+    const selectedEl = $('.full-menu');
 
-    if (selectedEl.css('width') === '0px') {
-      $('.full-menu').fadeIn();
-
-      selectedEl.animate(
-        {
-          width: '100%'
-        },
-        600
-      );
-    } else {
-      $('.full-menu').fadeOut();
-
-      selectedEl.animate(
-        {
-          width: '0'
-        },
-        600
-      );
-    }
+    selectedEl.toggleClass('open-full-mobile-menu');
   };
 
   const closeMenu = () => {
-    const selectedEl = $('.full-menu ul');
+    const selectedEl = $('.full-menu');
 
-    $('.full-menu').fadeOut();
-
-    selectedEl.animate(
-      {
-        width: '0'
-      },
-      600
-    );
+    selectedEl.removeClass('open-full-mobile-menu');
   };
+
   return (
-    <StyledMobileMenu>
-      <StyledFullMenu className="full-menu">
-        <button className="down" onClick={closeMenu}>
-          <span className="icon-x-circle"></span>
+    <>
+      <StyledMobileMnu className="full-menu">
+        <button onClick={closeMenu} className="close">
+          <span className="icon-chevron-down"></span>
         </button>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/hi">About</Link>
-          </li>
-          <li>
-            <Link to="/hi">Services</Link>
-          </li>
-          <li>
-            <Link to="/hi">Projects</Link>
-          </li>
-          <li>
-            <Link to="/hi">Products</Link>
-          </li>
-          <li>
-            <Link to="/hi">Kryton</Link>
-          </li>
-          <li>
-            <Link to="/hi">Distributors</Link>
-          </li>
-          <li>
-            <Link to="/hi">Careers</Link>
-          </li>
-          <li>
-            <Link to="/hi">Contact</Link>
-          </li>
-        </ul>
-      </StyledFullMenu>
+        <div className="content">
+          <StyledFullMenu>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/hi">About</Link>
+            </li>
+            <li>
+              <h2>Services</h2>
+              <ul>
+                <li>
+                  <Link to="/">General Construction Division</Link>
+                </li>
+                <li>
+                  <Link to="/">Specialized Engineering App. Division</Link>
+                </li>
+                <li>
+                  <Link to="/">Construction Chemicals Dist. Division</Link>
+                </li>
+                <li>
+                  <Link to="/">Kryton Execlusive Distributors</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2>Projects</h2>
+              <ul>
+                <li>
+                  <Link to="/">General Construction projects</Link>
+                </li>
+                <li>
+                  <Link to="/">Speciality engineering projects</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2>Products</h2>
+              <ul>
+                <li>
+                  <Link to="/">Kryton Waterproofing</Link>
+                </li>
+                <li>
+                  <Link to="/">Insuwrap PVC waterproofing</Link>
+                </li>
+                <li>
+                  <Link to="/">Alchimica (Sealants & Adhesives)</Link>
+                </li>
+                <li>
+                  <Link to="/">Olin - France (Sealants & Adhesives)</Link>
+                </li>
+                <li>
+                  <Link to="/">Contact Us</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2>Kryton</h2>
+              <ul>
+                <li>
+                  <Link to="/">Why KRYTON Waterproofing</Link>
+                </li>
+                <li>
+                  <Link to="/">What is Krystol Technology</Link>
+                </li>
+                <li>
+                  <Link to="/">Where to Use Kryton Materials</Link>
+                </li>
+                <li>
+                  <Link to="/">Kryton Systems</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2>Distributors</h2>
+              <ul>
+                <li>
+                  <Link to="/">Alexandria Distributors</Link>
+                </li>
+                <li>
+                  <Link to="/">Cairo Distributors</Link>
+                </li>
+                <li>
+                  <Link to="/">Beni Suef Distributors</Link>
+                </li>
+                <li>
+                  <Link to="/">Tanta Distributors</Link>
+                </li>
+                <li>
+                  <Link to="/">Become a Distributor?</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link to="/hi">Careers</Link>
+            </li>
+            <li>
+              <Link to="/hi">Contact</Link>
+            </li>
+          </StyledFullMenu>
+        </div>
+      </StyledMobileMnu>
       <StyledMenu>
         <li>
           <Link activeClassName="active-mobile-panel" to="/">
@@ -198,7 +245,7 @@ const MobileMenu = () => {
           </button>
         </li>
       </StyledMenu>
-    </StyledMobileMenu>
+    </>
   );
 };
 
