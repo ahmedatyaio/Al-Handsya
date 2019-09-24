@@ -14,7 +14,7 @@ const StyledMobileMnu = styled.div`
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   .content {
     width: 80%;
-    margin: 0 auto;
+    margin: 5rem auto 10rem;
   }
   .close {
     background: ${props => props.theme.colors.black};
@@ -22,12 +22,9 @@ const StyledMobileMnu = styled.div`
     color: #ffffff;
     padding: 1.2rem;
     position: absolute;
-    right: 3rem;
-    top: 3rem;
+    right: 4rem;
+    top: 6rem;
     font-size: 2.5rem;
-  }
-  @media (min-width: 835px) {
-    display: none;
   }
 `;
 
@@ -40,7 +37,7 @@ const StyledFullMenu = styled.ul`
       font-size: 1.6rem;
       color: #000000;
       font-family: ${props => props.theme.fonts.secondary};
-      margin: 2.5rem 0;
+      margin: 2rem 0;
       display: inline-block;
     }
     ul {
@@ -89,6 +86,9 @@ const StyledMenu = styled.ul`
   }
   .active-mobile-panel {
     color: ${props => props.theme.colors.yellow3};
+  }
+  @media (min-width: 835px) {
+    display: none;
   }
 `;
 
@@ -210,6 +210,7 @@ const MobileMenu = () => {
             <li>
               <Link to="/hi">Contact</Link>
             </li>
+            <br />
           </StyledFullMenu>
         </div>
       </StyledMobileMnu>
