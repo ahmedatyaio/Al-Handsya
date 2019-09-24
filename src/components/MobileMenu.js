@@ -14,7 +14,7 @@ const StyledMobileMnu = styled.div`
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   .content {
     width: 80%;
-    margin: 10rem auto;
+    margin: 7rem auto;
   }
   .close {
     background: ${props => props.theme.colors.black};
@@ -108,7 +108,7 @@ const MobileMenu = () => {
   return (
     <>
       <StyledMobileMnu className="full-menu">
-        <button name="close" onClick={closeMenu} className="close">
+        <button aria-label="close" onClick={closeMenu} className="close">
           <span className="icon-chevron-down"></span>
         </button>
         <div className="content">

@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import photoOne from '../images/homepage/header.png';
 import photoTwo from '../images/homepage/header-2.png';
+import photoMobile from '../images/homepage/header-mobile.jpg';
 
 class HeaderCarousel extends Component {
   constructor(props) {
@@ -169,7 +170,11 @@ class HeaderCarousel extends Component {
           <CarouselItemOne className="carousel-item">
             <div className="content">
               <div className="photo">
-                <img src={photoOne} alt="header one" />
+                <picture>
+                  <source media="(min-width: 768px)" srcSet={photoOne} />
+                  <source srcSet={photoMobile} />
+                  <img src={photoOne} alt="header one" />
+                </picture>
               </div>
               <div className="heading-typo">
                 <h2>General Construction Department</h2>
@@ -177,14 +182,14 @@ class HeaderCarousel extends Component {
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
                     <button
-                      name="previous"
+                      aria-label="previous"
                       className="button previous"
                       onClick={this.previous}
                     >
                       <span className="icon-chevron-left"></span>
                     </button>
                     <button
-                      name="next"
+                      aria-label="next"
                       className="button next"
                       onClick={this.next}
                     >
@@ -203,14 +208,14 @@ class HeaderCarousel extends Component {
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
                     <button
-                      name="previous"
+                      aria-label="previous"
                       className="button previous"
                       onClick={this.previous}
                     >
                       <span className="icon-chevron-left"></span>
                     </button>
                     <button
-                      name="next"
+                      aria-label="next"
                       className="button next"
                       onClick={this.next}
                     >
@@ -220,7 +225,11 @@ class HeaderCarousel extends Component {
                 </div>
               </div>
               <div className="photo">
-                <img src={photoTwo} alt="header two" />
+                <picture>
+                  <source media="(min-width: 768px)" srcSet={photoTwo} />
+                  <source srcSet={photoMobile} />
+                  <img src={photoTwo} alt="header two" />
+                </picture>
               </div>
             </div>
           </CarouselItemTwo>
