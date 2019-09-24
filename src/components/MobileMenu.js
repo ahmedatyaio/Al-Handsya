@@ -14,7 +14,7 @@ const StyledMobileMnu = styled.div`
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   .content {
     width: 80%;
-    margin: 5rem auto 10rem;
+    margin: 10rem auto;
   }
   .close {
     background: ${props => props.theme.colors.black};
@@ -23,7 +23,7 @@ const StyledMobileMnu = styled.div`
     padding: 1.2rem;
     position: absolute;
     right: 4rem;
-    top: 6rem;
+    top: 12rem;
     font-size: 2.5rem;
   }
 `;
