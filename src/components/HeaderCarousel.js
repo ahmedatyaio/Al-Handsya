@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import photoOne from '../images/homepage/header.png';
 import photoTwo from '../images/homepage/header-2.png';
-import photoMobile from '../images/homepage/header-mobile.jpg';
 
 class HeaderCarousel extends Component {
   constructor(props) {
@@ -171,8 +170,10 @@ class HeaderCarousel extends Component {
             <div className="content">
               <div className="photo">
                 <picture>
-                  <source media="(min-width: 768px)" srcSet={photoOne} />
-                  <source srcSet={photoMobile} />
+                  <source
+                    srcSet="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    media="(max-width: 767px)"
+                  />
                   <img src={photoOne} alt="header one" />
                 </picture>
               </div>
@@ -226,8 +227,10 @@ class HeaderCarousel extends Component {
               </div>
               <div className="photo">
                 <picture>
-                  <source media="(min-width: 768px)" srcSet={photoTwo} />
-                  <source srcSet={photoMobile} />
+                  <source
+                    srcSet="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    media="(max-width: 767px)"
+                  />
                   <img src={photoTwo} alt="header two" />
                 </picture>
               </div>

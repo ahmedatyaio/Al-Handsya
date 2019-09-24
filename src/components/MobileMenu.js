@@ -23,7 +23,7 @@ const StyledMobileMnu = styled.div`
     padding: 1.2rem;
     position: absolute;
     right: 4rem;
-    top: 12rem;
+    top: 9.5rem;
     font-size: 2.5rem;
   }
 `;
