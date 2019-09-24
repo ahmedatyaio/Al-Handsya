@@ -176,10 +176,18 @@ class HeaderCarousel extends Component {
                 <div>
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
-                    <button className="button previous" onClick={this.previous}>
+                    <button
+                      name="previous"
+                      className="button previous"
+                      onClick={this.previous}
+                    >
                       <span className="icon-chevron-left"></span>
                     </button>
-                    <button className="button next" onClick={this.next}>
+                    <button
+                      name="next"
+                      className="button next"
+                      onClick={this.next}
+                    >
                       <span className="icon-chevron-right"></span>
                     </button>
                   </div>
@@ -194,10 +202,18 @@ class HeaderCarousel extends Component {
                 <div>
                   <Link to="/">Read More</Link>
                   <div className="slick-btns">
-                    <button className="button previous" onClick={this.previous}>
+                    <button
+                      name="previous"
+                      className="button previous"
+                      onClick={this.previous}
+                    >
                       <span className="icon-chevron-left"></span>
                     </button>
-                    <button className="button next" onClick={this.next}>
+                    <button
+                      name="next"
+                      className="button next"
+                      onClick={this.next}
+                    >
                       <span className="icon-chevron-right"></span>
                     </button>
                   </div>

@@ -183,7 +183,7 @@ const Menu = () => {
   useEffect(() => {
     $(document).on('click', e => {
       const dropdown = $('.dropdown-menu');
-      if (e.target.id !== 'dropdown') {
+      if (e.target.classList.value !== 'dropdown') {
         dropdown.slideUp(200);
       }
     });
@@ -223,7 +223,7 @@ const Menu = () => {
             </li>
             <li>
               <button
-                id="dropdown"
+                className="dropdown"
                 onClick={() => onDropdownTrigger('services')}
               >
                 Services <span className="icon-chevron-down"></span>
@@ -245,7 +245,7 @@ const Menu = () => {
             </li>
             <li>
               <button
-                id="dropdown"
+                className="dropdown"
                 onClick={() => onDropdownTrigger('projects')}
               >
                 Projects <span className="icon-chevron-down"></span>
@@ -261,7 +261,7 @@ const Menu = () => {
             </li>
             <li>
               <button
-                id="dropdown"
+                className="dropdown"
                 onClick={() => onDropdownTrigger('products')}
               >
                 Products <span className="icon-chevron-down"></span>
@@ -285,7 +285,10 @@ const Menu = () => {
               </ul>
             </li>
             <li>
-              <button id="dropdown" onClick={() => onDropdownTrigger('kryton')}>
+              <button
+                className="dropdown"
+                onClick={() => onDropdownTrigger('kryton')}
+              >
                 Kryton <span className="icon-chevron-down"></span>
               </button>
               <ul className="dropdown-menu kryton-dropdown">
@@ -305,7 +308,7 @@ const Menu = () => {
             </li>
             <li>
               <button
-                id="dropdown"
+                className="dropdown"
                 onClick={() => onDropdownTrigger('distributors')}
               >
                 Distributors <span className="icon-chevron-down"></span>

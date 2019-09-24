@@ -22,6 +22,7 @@ const Template = ({ children }) => {
           content="Al-Handsya is a leading construction and real estate company based in Cairo, EG"
         />
         <link rel="icon" href={favicon} />
+        <html lang="en" />
       </Helmet>
 
       <ThemeProvider theme={theme}>

@@ -108,7 +108,7 @@ const MobileMenu = () => {
   return (
     <>
       <StyledMobileMnu className="full-menu">
-        <button onClick={closeMenu} className="close">
+        <button name="close" onClick={closeMenu} className="close">
           <span className="icon-chevron-down"></span>
         </button>
         <div className="content">
@@ -117,7 +117,7 @@ const MobileMenu = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/hi">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <h2>Services</h2>
@@ -205,13 +205,13 @@ const MobileMenu = () => {
               </ul>
             </li>
             <li>
-              <Link to="/hi">Careers</Link>
+              <Link to="/about">Careers</Link>
             </li>
             <li>
-              <Link to="/hi">Contact</Link>
+              <Link to="/about">Contact</Link>
             </li>
-            <br />
           </StyledFullMenu>
+          <br />
         </div>
       </StyledMobileMnu>
       <StyledMenu>
@@ -222,25 +222,25 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/hi">
+          <Link activeClassName="active-mobile-panel" to="/about">
             <span className="icon-briefcase"></span>
             Services
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/hi">
+          <Link activeClassName="active-mobile-panel" to="/about">
             <span className="icon-buildings"></span>
             Projects
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/hi">
+          <Link activeClassName="active-mobile-panel" to="/about">
             <span className="icon-brush"></span>
             Products
           </Link>
         </li>
         <li>
-          <button onClick={showFullMenu}>
+          <button name="other" onClick={showFullMenu}>
             <span className="icon-vertical-dots"></span>
             Other
           </button>
