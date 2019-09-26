@@ -217,7 +217,7 @@ const Menu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" activeClassName="current-page">
+              <Link to="/about" activeClassName="current-page">
                 About
               </Link>
             </li>
