@@ -1,12 +1,16 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Helmet from 'react-helmet';
-import favicon from '../images/favicon.ico';
 import GlobalStyle from '../styles/global';
 import theme from '../styles/theme';
 import Menu from './Menu';
 import MobileMenu from './MobileMenu';
 import Footer from './Footer';
+
+import IconAppleTouch from '../images/favicon/apple-touch-icon.png';
+import FavIcon32 from '../images/favicon/favicon-32x32.png';
+import FavIcon16 from '../images/favicon/favicon-16x16.png';
+import SafariTab from '../images/favicon/safari-pinned-tab.svg';
 
 import '../images/icons/icons.css';
 
@@ -21,7 +25,11 @@ const Template = ({ children }) => {
           name="description"
           content="Al-Handsya is a leading construction and real estate company based in Cairo, EG"
         />
-        <link rel="icon" href={favicon} />
+        <link rel="apple-touch-icon" sizes="180x180" href={IconAppleTouch} />
+        <link rel="icon" type="image/png" sizes="32x32" href={FavIcon32} />
+        <link rel="icon" type="image/png" sizes="16x16" href={FavIcon16} />
+        <link rel="mask-icon" href={SafariTab} color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#ffc40d"></meta>
         <html lang="en" />
       </Helmet>
 
