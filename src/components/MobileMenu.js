@@ -123,13 +123,19 @@ const MobileMenu = () => {
               <h2>Services</h2>
               <ul>
                 <li>
-                  <Link to="/">General Construction Division</Link>
+                  <Link to="/services/general-construction-division">
+                    General Construction Division
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Specialized Engineering App. Division</Link>
+                  <Link to="/services/specialized-engineering-division">
+                    Specialized Engineering App. Division
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Construction Chemicals Dist. Division</Link>
+                  <Link to="/services/construction-chemicals">
+                    Construction Chemicals Dist. Division
+                  </Link>
                 </li>
                 <li>
                   <Link to="/">Kryton Execlusive Distributors</Link>
@@ -216,25 +222,25 @@ const MobileMenu = () => {
       </StyledMobileMnu>
       <StyledMenu>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/">
+          <Link to="/">
             <span className="icon-home"></span>
             Home
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/about">
+          <Link to="/services">
             <span className="icon-briefcase"></span>
             Services
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/about">
+          <Link to="/about">
             <span className="icon-buildings"></span>
             Projects
           </Link>
         </li>
         <li>
-          <Link activeClassName="active-mobile-panel" to="/about">
+          <Link to="/about">
             <span className="icon-brush"></span>
             Products
           </Link>

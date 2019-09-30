@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import CallToAction from '../components/CallToAction';
 
 const PageHeader = styled.div`
   height: 35vh;
@@ -50,38 +51,6 @@ const AboutSections = styled.div`
     p {
       font-size: 1.4rem;
       margin-bottom: 2.5rem;
-    }
-  }
-`;
-
-const CallToAction = styled.div`
-  background: ${props => props.theme.colors.yellow2};
-  padding: 2rem;
-  font-family: ${props => props.theme.fonts.primary};
-  .content {
-    width: 90%;
-    max-width: ${props => props.theme.responsive.maxWidth};
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    h2 {
-      font-size: 2.5rem;
-      color: white;
-    }
-    a {
-      color: white;
-      border: 3px solid#ffffff;
-      font-size: 1.6rem;
-      padding: 1.5rem 2.5rem;
-      transition: 0.5s all ease-in-out;
-      &:hover {
-        background: #ffffff;
-        color: #000000;
-      }
-    }
-    @media (max-width: 460px) {
-      flex-direction: column;
     }
   }
 `;
@@ -193,12 +162,7 @@ const about = ({ data }) => {
           help you make the right decisions for your projects – new or existing.
         </p>
       </AboutSections>
-      <CallToAction>
-        <div className="content">
-          <h2>Like what you see?</h2>
-          <a href="mailto:alhandsya@alhandsya.com">Email Us</a>
-        </div>
-      </CallToAction>
+      <CallToAction />
     </Layout>
   );
 };
@@ -208,13 +172,6 @@ export const data = graphql`
     aboutImg: file(relativePath: { eq: "about/about-us.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    ourMission: file(relativePath: { eq: "about/our-mission.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

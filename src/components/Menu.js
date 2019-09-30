@@ -230,13 +230,19 @@ const Menu = () => {
               </button>
               <ul className="dropdown-menu services-dropdown">
                 <li>
-                  <Link to="/">General Construction Division</Link>
+                  <Link to="/services/general-construction-division">
+                    General Construction Division
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Specialized Engineering App. Division</Link>
+                  <Link to="/services/specialized-engineering-division">
+                    Specialized Engineering App. Division
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Construction Chemicals Dist. Division</Link>
+                  <Link to="/services/construction-chemicals">
+                    Construction Chemicals Dist. Division
+                  </Link>
                 </li>
                 <li>
                   <Link to="/">Kryton Execlusive Distributors</Link>
@@ -244,20 +250,9 @@ const Menu = () => {
               </ul>
             </li>
             <li>
-              <button
-                className="dropdown"
-                onClick={() => onDropdownTrigger('projects')}
-              >
-                Projects <span className="icon-chevron-down"></span>
-              </button>
-              <ul className="dropdown-menu projects-dropdown">
-                <li>
-                  <Link to="/">General Construction projects</Link>
-                </li>
-                <li>
-                  <Link to="/">Speciality engineering projects</Link>
-                </li>
-              </ul>
+              <Link to="/" activeClassName="current-page">
+                Projects
+              </Link>
             </li>
             <li>
               <button
