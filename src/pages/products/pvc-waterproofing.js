@@ -6,10 +6,10 @@ import CallToAction from '../../components/CallToAction';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 
-const ConstructionChemicals = ({ data }) => {
+const PVCWaterproofing = ({ data }) => {
   const StyledHeader = styled.div`
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     .head {
       margin: auto;
       width: 100%;
@@ -177,4 +177,4 @@ export const data = graphql`
   }
 `;
 
-export default ConstructionChemicals;
+export default PVCWaterproofing;

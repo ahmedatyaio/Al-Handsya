@@ -1,16 +1,15 @@
-import React from 'react';
 import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
 import BackgroundImg from 'gatsby-background-image';
-
+import React from 'react';
+import styled from 'styled-components';
+import CallToAction from '../../components/CallToAction';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
-import CallToAction from '../../components/CallToAction';
 
 const GeneralConstruction = ({ data }) => {
   const StyledHeader = styled.div`
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     .head {
       margin: auto;
       width: 100%;

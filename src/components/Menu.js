@@ -288,26 +288,7 @@ const Menu = () => {
               </ul>
             </li>
             <li>
-              <button
-                className="dropdown"
-                onClick={() => onDropdownTrigger('kryton')}
-              >
-                Kryton <span className="icon-chevron-down"></span>
-              </button>
-              <ul className="dropdown-menu kryton-dropdown">
-                <li>
-                  <Link to="/">Why KRYTON Waterproofing</Link>
-                </li>
-                <li>
-                  <Link to="/">What is Krystol Technology</Link>
-                </li>
-                <li>
-                  <Link to="/">Where to Use Kryton Materials</Link>
-                </li>
-                <li>
-                  <Link to="/">Kryton Systems</Link>
-                </li>
-              </ul>
+              <Link to="/kryton/why-kryton">Kryton</Link>
             </li>
             <li>
               <button

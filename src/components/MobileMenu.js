@@ -228,7 +228,7 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/services">
+          <Link to="/services/general-construction-division" activeClassName="active-mobile-panel">
             <span className="icon-briefcase"></span>
             Services
           </Link>
@@ -240,7 +240,7 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link to="/products/kryton-waterproofing" activeClassName="active-mobile-panel">
             <span className="icon-brush"></span>
             Products
           </Link>
