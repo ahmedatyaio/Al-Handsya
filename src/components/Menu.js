@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
-import styled from 'styled-components';
 import $ from 'jquery';
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 const Nav = styled.nav`
   font-family: ${props => props.theme.fonts.primary};
@@ -250,7 +250,7 @@ const Menu = () => {
               </ul>
             </li>
             <li>
-              <Link to="/" activeClassName="current-page">
+              <Link to="/projects" activeClassName="current-page">
                 Projects
               </Link>
             </li>
@@ -263,16 +263,24 @@ const Menu = () => {
               </button>
               <ul className="dropdown-menu products-dropdown">
                 <li>
-                  <Link to="/">Kryton Waterproofing</Link>
+                  <Link to="/products/kryton-waterproofing">
+                    Kryton Waterproofing
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Insuwrap PVC waterproofing</Link>
+                  <Link to="/products/pvc-waterproofing">
+                    Insuwrap PVC waterproofing
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Alchimica (Sealants & Adhesives)</Link>
+                  <Link to="/products/alchimica">
+                    Alchimica (Sealants & Adhesives)
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/">Olin - France (Sealants & Adhesives)</Link>
+                  <Link to="/products/olin">
+                    Olin - France (Sealants & Adhesives)
+                  </Link>
                 </li>
                 <li>
                   <Link to="/">Contact Us</Link>

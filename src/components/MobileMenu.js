@@ -1,6 +1,6 @@
-import React from 'react';
 import { Link } from 'gatsby';
 import $ from 'jquery';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledMobileMnu = styled.div`
@@ -222,7 +222,7 @@ const MobileMenu = () => {
       </StyledMobileMnu>
       <StyledMenu>
         <li>
-          <Link to="/">
+          <Link to="/" activeClassName="active-mobile-panel">
             <span className="icon-home"></span>
             Home
           </Link>
@@ -234,7 +234,7 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link to="/projects" activeClassName="active-mobile-panel">
             <span className="icon-buildings"></span>
             Projects
           </Link>

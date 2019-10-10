@@ -1,20 +1,18 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { graphql, Link } from 'gatsby';
 import BackgroundImg from 'gatsby-background-image';
-
-import Layout from '../components/layout';
+import Img from 'gatsby-image';
+import React from 'react';
 import HeaderCarousel from '../components/HeaderCarousel';
+import Layout from '../components/layout';
 import OurPartners from '../components/OurPartners';
-
 import {
-  SeeAll,
-  TwoSidedBlock,
   CategoriesPanel,
-  SectionHeading,
+  ContactUsDetails,
   OurEquipment,
   OurProjects,
-  ContactUsDetails
+  SectionHeading,
+  SeeAll,
+  TwoSidedBlock
 } from '../components/styles/index';
 
 const index = ({ data }) => {
@@ -273,7 +271,10 @@ export const data = graphql`
         }
       }
     }
-    allProjects: allContentfulProjects(limit: 5) {
+    allProjects: allContentfulProjects(
+      limit: 5
+      sort: { order: DESC, fields: [createdAt] }
+    ) {
       edges {
         node {
           heroImage {
@@ -288,7 +289,10 @@ export const data = graphql`
         }
       }
     }
-    allPartners: allContentfulPartners(limit: 10) {
+    allPartners: allContentfulPartners(
+      limit: 10
+      sort: { order: DESC, fields: [createdAt] }
+    ) {
       edges {
         node {
           name

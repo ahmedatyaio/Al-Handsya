@@ -293,7 +293,7 @@ export const SectionHeading = styled.div`
       width: 55%;
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (max-width: 480px) {
     margin-bottom: 3rem;
     .outline {
       width: 90%;
@@ -302,6 +302,17 @@ export const SectionHeading = styled.div`
     }
     h3 {
       text-align: center;
+    }
+  }
+  @media (max-width: 360px) {
+    .outline {
+      font-size: 3rem;
+      &:before {
+        height: 2rem;
+      }
+    }
+    h3 {
+      font-size: 3.5rem;
     }
   }
 `;

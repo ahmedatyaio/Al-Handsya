@@ -22,6 +22,7 @@
     "gatsby-source-contentful": "^2.1.28",
     "gatsby-source-filesystem": "^2.1.17",
     "gatsby-transformer-sharp": "^2.2.12",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "popper.js": "^1.15.0",
