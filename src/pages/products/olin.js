@@ -168,7 +168,7 @@ const Olin = ({ data }) => {
 
 export const data = graphql`
   {
-    headerImg: file(relativePath: { eq: "services/services-header-1.jpg" }) {
+    headerImg: file(relativePath: { eq: "products/olin-header.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
