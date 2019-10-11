@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 
 const projects = ({ data }) => {
   const StyledHeader = styled.div`
-    height: 30vh;
+    height: 35vh;
     .gatsby-image-wrapper {
       height: 100%;
     }
@@ -63,7 +63,7 @@ const projects = ({ data }) => {
       justify-content: space-between;
       .project {
         width: 32.6%;
-        margin-bottom: 6rem;
+        margin-bottom: 7.5rem;
         height: 26rem;
         .gatsby-image-wrapper {
           height: 100%;
@@ -72,6 +72,15 @@ const projects = ({ data }) => {
           color: ${props => props.theme.colors.black};
           font-family: ${props => props.theme.fonts.secondary};
           font-size: 2rem;
+        }
+        p {
+          font-family: ${props => props.theme.fonts.secondary};
+          font-size: 1.2rem;
+          color: ${props => props.theme.colors.black};
+          margin-top: 0.5rem;
+        }
+        h2 {
+          margin-bottom: 0;
         }
       }
     }
@@ -92,13 +101,13 @@ const projects = ({ data }) => {
       <StyledProjcets>
         <ul className="filters">
           <li>
-            <button href="#">All</button>
+            <button>All</button>
           </li>
           <li>
-            <button href="#">General</button>
+            <button>General Construction Projects</button>
           </li>
           <li>
-            <button href="#">Special</button>
+            <button>Speciality Engineering Projects</button>
           </li>
         </ul>
         <div className="projects">
@@ -108,6 +117,7 @@ const projects = ({ data }) => {
               <h2>
                 <Link to="/">{project.node.projectName}</Link>
               </h2>
+              <p>{project.node.projectType}</p>
             </div>
           ))}
         </div>
@@ -119,7 +129,7 @@ const projects = ({ data }) => {
 
 export const data = graphql`
   {
-    headerImg: file(relativePath: { eq: "services/services-header-1.jpg" }) {
+    headerImg: file(relativePath: { eq: "projects/projects-header.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -127,7 +137,6 @@ export const data = graphql`
       }
     }
     allProjects: allContentfulProjects(
-      limit: 6
       sort: { order: DESC, fields: [createdAt] }
     ) {
       edges {
