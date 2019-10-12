@@ -291,29 +291,7 @@ const Menu = () => {
               <Link to="/kryton/why-kryton">Kryton</Link>
             </li>
             <li>
-              <button
-                className="dropdown"
-                onClick={() => onDropdownTrigger('distributors')}
-              >
-                Distributors <span className="icon-chevron-down"></span>
-              </button>
-              <ul className="dropdown-menu distributors-dropdown">
-                <li>
-                  <Link to="/">Alexandria Distributors</Link>
-                </li>
-                <li>
-                  <Link to="/">Cairo Distributors</Link>
-                </li>
-                <li>
-                  <Link to="/">Beni Suef Distributors</Link>
-                </li>
-                <li>
-                  <Link to="/">Tanta Distributors</Link>
-                </li>
-                <li>
-                  <Link to="/">Become a Distributor?</Link>
-                </li>
-              </ul>
+              <Link to="/distributors">Distributors</Link>
             </li>
             <li>
               <Link to="/" activeClassName="current-page">
@@ -326,9 +304,6 @@ const Menu = () => {
               </Link>
             </li>
           </MenuLinks>
-          {/* <MobileMenuButton onClick={handleToggle}>
-          <span className="icon-bx-menu-alt-right"></span>
-        </MobileMenuButton> */}
         </div>
       </PrimaryMenu>
     </Nav>

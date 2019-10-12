@@ -32,6 +32,16 @@ const projects = ({ data }) => {
       width: 65%;
       color: #9e9e9e;
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      h1 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+    }
   `;
 
   const StyledProjcets = styled.div`
@@ -84,6 +94,30 @@ const projects = ({ data }) => {
         }
       }
     }
+
+    @media (max-width: 768px) {
+      .filters {
+        overflow-x: auto;
+        li {
+          flex: 0 0 auto;
+        }
+      }
+      .projects {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        .project {
+          width: 60%;
+          margin-right: 1rem;
+          flex: 0 0 auto;
+        }
+      }
+    }
+    @media (max-width: 480px) {
+      .projects .project {
+        width: 90%;
+      }
+    }
   `;
   return (
     <Layout>
@@ -104,10 +138,10 @@ const projects = ({ data }) => {
             <button>All</button>
           </li>
           <li>
-            <button>General Construction Projects</button>
+            <button>General Construction</button>
           </li>
           <li>
-            <button>Speciality Engineering Projects</button>
+            <button>Speciality Engineering</button>
           </li>
         </ul>
         <div className="projects">
