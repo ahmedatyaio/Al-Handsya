@@ -1,9 +1,10 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 
-const WhyKryton = () => {
+const WhyKryton = ({ data }) => {
   const StyledHeader = styled.div`
     height: 20vh;
     position: relative;
@@ -47,10 +48,34 @@ const WhyKryton = () => {
   const StyledWhy = styled.div`
     max-width: ${props => props.theme.responsive.maxWidth};
     width: 90%;
-    display: block;
-    margin: 5rem auto;
-    img {
-      width: 100%;
+    display: flex;
+    margin: 6rem auto;
+    justify-content: space-between;
+    .systems {
+      width: 25%;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      padding: 3rem 2rem;
+      .active-system {
+        color: ${props => props.theme.colors.yellow3};
+      }
+      li {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        font-family: ${props => props.theme.fonts.secondary};
+        border-bottom: 1px solid#dcdcdc;
+        padding-bottom: 2rem;
+        a {
+          color: ${props => props.theme.colors.black};
+          &:hover {
+            color: ${props => props.theme.colors.yellow3};
+          }
+        }
+      }
+    }
+    .photo {
+      width: 70%;
     }
   `;
 
@@ -87,7 +112,7 @@ const WhyKryton = () => {
             <li>
               <Link
                 activeClassName="active-kryton-page"
-                to="/kryton/kryton-systems"
+                to="/kryton/kryton-systems/concrete-waterproofing"
               >
                 Kryton Systems
               </Link>
@@ -96,10 +121,60 @@ const WhyKryton = () => {
         </div>
       </StyledHeader>
       <StyledWhy>
-        <div className="systems"></div>
+        <ul className="systems">
+          <li>
+            <Link
+              to="/kryton/kryton-systems/concrete-waterproofing"
+              activeClassName="active-system"
+            >
+              Concrete Waterproofing Admixtures "KIM"
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/kryton/kryton-systems/mortar-waterproofing"
+              activeClassName="active-system"
+            >
+              Mortar Waterproofing Admixtures "KMA"
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/kryton/kryton-systems/waterproofing-coatings"
+              activeClassName="active-system"
+            >
+              Waterproofing Coatings "Krystol T1 & T2"
+            </Link>
+          </li>
+          <li>
+            <Link>Crack Repair Systems</Link>
+          </li>
+          <li>
+            <Link>Krystol Waterstop Systems</Link>
+          </li>
+          <li>
+            <Link>Hydrostop Sealer</Link>
+          </li>
+          <li>
+            <Link>Hydrostop Restore & Protect System</Link>
+          </li>
+        </ul>
+        <Img className="photo" fluid={data.tt.childImageSharp.fluid} />
       </StyledWhy>
     </Layout>
   );
 };
+
+export const data = graphql`
+  {
+    tt: file(relativePath: { eq: "kryton/tt.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`;
 
 export default WhyKryton;

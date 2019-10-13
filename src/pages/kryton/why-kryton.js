@@ -88,7 +88,7 @@ const WhyKryton = ({ data }) => {
             <li>
               <Link
                 activeClassName="active-kryton-page"
-                to="/kryton/kryton-systems"
+                to="/kryton/kryton-systems/concrete-waterproofing"
               >
                 Kryton Systems
               </Link>

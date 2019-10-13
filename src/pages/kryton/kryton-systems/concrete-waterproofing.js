@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 
 const WhyKryton = ({ data }) => {
   const StyledHeader = styled.div`
@@ -48,10 +48,34 @@ const WhyKryton = ({ data }) => {
   const StyledWhy = styled.div`
     max-width: ${props => props.theme.responsive.maxWidth};
     width: 90%;
-    display: block;
-    margin: 5rem auto;
-    img {
-      width: 100%;
+    display: flex;
+    margin: 6rem auto;
+    justify-content: space-between;
+    .systems {
+      width: 25%;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      padding: 3rem 2rem;
+      .active-system {
+        color: ${props => props.theme.colors.yellow3};
+      }
+      li {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        font-family: ${props => props.theme.fonts.secondary};
+        border-bottom: 1px solid#dcdcdc;
+        padding-bottom: 2rem;
+        a {
+          color: ${props => props.theme.colors.black};
+          &:hover {
+            color: ${props => props.theme.colors.yellow3};
+          }
+        }
+      }
+    }
+    .photo {
+      width: 70%;
     }
   `;
 
@@ -59,7 +83,7 @@ const WhyKryton = ({ data }) => {
     <Layout>
       <StyledHeader>
         <div className="content">
-          <h1>Where to use Kryton</h1>
+          <h1>Kryton Systems</h1>
           <ul>
             <li>
               <Link
@@ -97,7 +121,40 @@ const WhyKryton = ({ data }) => {
         </div>
       </StyledHeader>
       <StyledWhy>
-        <Img fluid={data.where.childImageSharp.fluid} />
+        <ul className="systems">
+          <li>
+            <Link
+              to="/kryton/kryton-systems/concrete-waterproofing"
+              activeClassName="active-system"
+            >
+              Concrete Waterproofing Admixtures "KIM"
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/kryton/kryton-systems/mortar-waterproofing"
+              activeClassName="active-system"
+            >
+              Mortar Waterproofing Admixtures "KMA"
+            </Link>
+          </li>
+          <li>
+            <Link>Waterproofing Coatings "Krystol T1 & T2"</Link>
+          </li>
+          <li>
+            <Link>Crack Repair Systems</Link>
+          </li>
+          <li>
+            <Link>Krystol Waterstop Systems</Link>
+          </li>
+          <li>
+            <Link>Hydrostop Sealer</Link>
+          </li>
+          <li>
+            <Link>Hydrostop Restore & Protect System</Link>
+          </li>
+        </ul>
+        <Img className="photo" fluid={data.kim.childImageSharp.fluid} />
       </StyledWhy>
     </Layout>
   );
@@ -105,9 +162,9 @@ const WhyKryton = ({ data }) => {
 
 export const data = graphql`
   {
-    where: file(relativePath: { eq: "kryton/where.jpg" }) {
+    kim: file(relativePath: { eq: "kryton/kim.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1150) {
+        fluid(maxWidth: 900) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
