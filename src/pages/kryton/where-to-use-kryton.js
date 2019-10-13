@@ -48,10 +48,10 @@ const WhyKryton = ({ data }) => {
   const StyledWhy = styled.div`
     max-width: ${props => props.theme.responsive.maxWidth};
     width: 90%;
-    display: flex;
+    display: block;
     margin: 5rem auto;
-    .photo {
-      width: 50%;
+    img {
+      width: 100%;
     }
   `;
 
@@ -59,7 +59,7 @@ const WhyKryton = ({ data }) => {
     <Layout>
       <StyledHeader>
         <div className="content">
-          <h1>Why Kryton</h1>
+          <h1>Where to use Kryton</h1>
           <ul>
             <li>
               <Link
@@ -97,8 +97,7 @@ const WhyKryton = ({ data }) => {
         </div>
       </StyledHeader>
       <StyledWhy>
-        <Img className="photo" fluid={data.whyOne.childImageSharp.fluid} />
-        <Img className="photo" fluid={data.whyTwo.childImageSharp.fluid} />
+        <Img fluid={data.where.childImageSharp.fluid} />
       </StyledWhy>
     </Layout>
   );
@@ -106,16 +105,9 @@ const WhyKryton = ({ data }) => {
 
 export const data = graphql`
   {
-    whyOne: file(relativePath: { eq: "kryton/why1.jpg" }) {
+    where: file(relativePath: { eq: "kryton/where.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    whyTwo: file(relativePath: { eq: "kryton/why2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
+        fluid(maxWidth: 1150) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

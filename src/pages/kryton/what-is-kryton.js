@@ -59,7 +59,7 @@ const WhyKryton = ({ data }) => {
     <Layout>
       <StyledHeader>
         <div className="content">
-          <h1>Why Kryton</h1>
+          <h1>What is Kryton</h1>
           <ul>
             <li>
               <Link
@@ -97,8 +97,8 @@ const WhyKryton = ({ data }) => {
         </div>
       </StyledHeader>
       <StyledWhy>
-        <Img className="photo" fluid={data.whyOne.childImageSharp.fluid} />
-        <Img className="photo" fluid={data.whyTwo.childImageSharp.fluid} />
+        <Img className="photo" fluid={data.whatOne.childImageSharp.fluid} />
+        <Img className="photo" fluid={data.whatTwo.childImageSharp.fluid} />
       </StyledWhy>
     </Layout>
   );
@@ -106,14 +106,14 @@ const WhyKryton = ({ data }) => {
 
 export const data = graphql`
   {
-    whyOne: file(relativePath: { eq: "kryton/why1.jpg" }) {
+    whatOne: file(relativePath: { eq: "kryton/what1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    whyTwo: file(relativePath: { eq: "kryton/why2.jpg" }) {
+    whatTwo: file(relativePath: { eq: "kryton/what2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -199,7 +199,7 @@ template {
 .open-full-mobile-menu {
   transform: translate3d(0, 0, 0) !important;
 }
-.active-kryton-page{
+.active-kryton-page {
   background: ${theme.colors.black};
   color: #fff !important;
 }

@@ -1,10 +1,9 @@
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../../components/layout';
 
-const WhyKryton = ({ data }) => {
+const WhyKryton = () => {
   const StyledHeader = styled.div`
     height: 20vh;
     position: relative;
@@ -48,10 +47,10 @@ const WhyKryton = ({ data }) => {
   const StyledWhy = styled.div`
     max-width: ${props => props.theme.responsive.maxWidth};
     width: 90%;
-    display: flex;
+    display: block;
     margin: 5rem auto;
-    .photo {
-      width: 50%;
+    img {
+      width: 100%;
     }
   `;
 
@@ -59,7 +58,7 @@ const WhyKryton = ({ data }) => {
     <Layout>
       <StyledHeader>
         <div className="content">
-          <h1>Why Kryton</h1>
+          <h1>Kryton Systems</h1>
           <ul>
             <li>
               <Link
@@ -97,30 +96,10 @@ const WhyKryton = ({ data }) => {
         </div>
       </StyledHeader>
       <StyledWhy>
-        <Img className="photo" fluid={data.whyOne.childImageSharp.fluid} />
-        <Img className="photo" fluid={data.whyTwo.childImageSharp.fluid} />
+        <div className="systems"></div>
       </StyledWhy>
     </Layout>
   );
 };
-
-export const data = graphql`
-  {
-    whyOne: file(relativePath: { eq: "kryton/why1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    whyTwo: file(relativePath: { eq: "kryton/why2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`;
 
 export default WhyKryton;
