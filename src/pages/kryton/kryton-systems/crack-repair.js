@@ -3,7 +3,12 @@ import React from 'react';
 import KrytonSystems from '../../../components/KrytonSystems';
 
 const CrackRepair = ({ data }) => {
-  return <KrytonSystems photo={data.crack.childImageSharp.fluid} />;
+  return (
+    <KrytonSystems
+      title="Crack Repair Systems"
+      photo={data.crack.childImageSharp.fluid}
+    />
+  );
 };
 
 export const data = graphql`

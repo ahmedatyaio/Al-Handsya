@@ -3,7 +3,12 @@ import React from 'react';
 import KrytonSystems from '../../../components/KrytonSystems';
 
 const HydrostopRestore = ({ data }) => {
-  return <KrytonSystems photo={data.restore.childImageSharp.fluid} />;
+  return (
+    <KrytonSystems
+      title="Hydrostop Restore & Protect System"
+      photo={data.restore.childImageSharp.fluid}
+    />
+  );
 };
 
 export const data = graphql`

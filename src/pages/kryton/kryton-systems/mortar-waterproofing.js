@@ -3,7 +3,12 @@ import React from 'react';
 import KrytonSystems from '../../../components/KrytonSystems';
 
 const MortarWaterproofing = ({ data }) => {
-  return <KrytonSystems phot={data.kma.childImageSharp.fluid} />;
+  return (
+    <KrytonSystems
+      title='Mortar Waterproofing Admixtures "KMA"'
+      photo={data.kma.childImageSharp.fluid}
+    />
+  );
 };
 
 export const data = graphql`

@@ -2,8 +2,13 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import KrytonSystems from '../../../components/KrytonSystems';
 
-const WhyKryton = ({ data }) => {
-  return <KrytonSystems photo={data.kim.childImageSharp.fluid} />;
+const ConcreteWaterproofing = ({ data }) => {
+  return (
+    <KrytonSystems
+      title="Concrete Waterproofing Admixtures 'KIM'"
+      photo={data.kim.childImageSharp.fluid}
+    />
+  );
 };
 
 export const data = graphql`
@@ -18,4 +23,4 @@ export const data = graphql`
   }
 `;
 
-export default WhyKryton;
+export default ConcreteWaterproofing;
