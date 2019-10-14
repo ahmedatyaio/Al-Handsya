@@ -291,7 +291,7 @@ const Menu = () => {
               <Link to="/kryton/why-kryton">Kryton</Link>
             </li>
             <li>
-              <Link to="/distributors">Distributors</Link>
+              <Link to="/distributors/alexandria">Distributors</Link>
             </li>
             <li>
               <Link to="/" activeClassName="current-page">
