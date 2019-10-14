@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledCallToAction = styled.div`
   background: ${props => props.theme.colors.yellow2};
   padding: 1rem;
-  font-family: ${props => props.theme.fonts.secondary};
+  font-family: ${props => props.theme.fonts.primary};
   .content {
     width: 90%;
     max-width: ${props => props.theme.responsive.maxWidth};
@@ -13,7 +13,7 @@ const StyledCallToAction = styled.div`
     justify-content: space-between;
     align-items: center;
     h2 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       color: white;
     }
     a {

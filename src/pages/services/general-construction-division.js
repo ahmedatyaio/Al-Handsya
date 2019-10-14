@@ -116,10 +116,13 @@ const GeneralConstruction = ({ data }) => {
           </p>
         </div>
         <PrevAndNextService>
-          <Link className="prev" to="/">
+          <Link className="prev" to="/services/construction-chemicals">
             Previous Service
           </Link>
-          <Link className="next" to="/">
+          <Link
+            className="next"
+            to="/services/specialized-engineering-division"
+          >
             Next Service
           </Link>
         </PrevAndNextService>

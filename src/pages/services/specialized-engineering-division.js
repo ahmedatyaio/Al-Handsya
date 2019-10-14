@@ -113,10 +113,10 @@ const SpecializedEngineering = ({ data }) => {
           <p>Our last but not least addition was the Stamped concrete work.</p>
         </div>
         <PrevAndNextService>
-          <Link className="prev" to="/">
+          <Link className="prev" to="/services//general-construction-division">
             Previous Service
           </Link>
-          <Link className="next" to="/">
+          <Link className="next" to="/services/construction-chemicals">
             Next Service
           </Link>
         </PrevAndNextService>

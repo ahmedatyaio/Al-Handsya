@@ -136,10 +136,13 @@ const ConstructionChemicals = ({ data }) => {
           </p>
         </div>
         <PrevAndNextService>
-          <Link className="prev" to="/">
+          <Link
+            className="prev"
+            to="/services/specialized-engineering-division"
+          >
             Previous Service
           </Link>
-          <Link className="next" to="/">
+          <Link className="next" to="/services/general-construction-division">
             Next Service
           </Link>
         </PrevAndNextService>
