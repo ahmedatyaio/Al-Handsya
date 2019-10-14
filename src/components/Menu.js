@@ -283,7 +283,7 @@ const Menu = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">Contact Us</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
             </li>
@@ -294,12 +294,12 @@ const Menu = () => {
               <Link to="/distributors/alexandria">Distributors</Link>
             </li>
             <li>
-              <Link to="/" activeClassName="current-page">
+              <Link to="/careers" activeClassName="current-page">
                 Careers
               </Link>
             </li>
             <li>
-              <Link to="/" activeClassName="current-page">
+              <Link to="/contact-us" activeClassName="current-page">
                 Contact Us
               </Link>
             </li>
