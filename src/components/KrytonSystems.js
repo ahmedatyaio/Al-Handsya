@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+import CallToAction from './CallToAction';
 import Layout from './layout';
 import SEO from './seo';
 
@@ -217,6 +218,7 @@ const KrytonSystems = ({ photo, title }) => {
         </ul>
         <Img className="photo" fluid={photo} />
       </StyledWhy>
+      <CallToAction />
     </Layout>
   );
 };

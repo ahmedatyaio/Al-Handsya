@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+import CallToAction from './CallToAction';
 import Layout from './layout';
 import SEO from './seo';
 
@@ -33,7 +34,7 @@ const KrytonSystems = ({ photoOne, photoTwo, title, hasMultipleImages }) => {
     display: flex;
     margin: 5rem auto;
     .photo {
-      width: 50%;
+      width: ${hasMultipleImages ? '50%' : '100%'};
     }
     @media (max-width: 450px) {
       flex-wrap: wrap;
@@ -126,6 +127,7 @@ const KrytonSystems = ({ photoOne, photoTwo, title, hasMultipleImages }) => {
         <Img className="photo" fluid={photoOne} />
         {hasMultipleImages && <Img className="photo" fluid={photoTwo} />}
       </StyledWhy>
+      <CallToAction />
     </Layout>
   );
 };
