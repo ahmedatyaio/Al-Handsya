@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
 import { Link } from 'gatsby';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
-import styled from 'styled-components';
-
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import photoOne from '../images/homepage/header.png';
+import 'slick-carousel/slick/slick.css';
+import styled from 'styled-components';
 import photoTwo from '../images/homepage/header-2.png';
+import photoOne from '../images/homepage/header.png';
 
 class HeaderCarousel extends Component {
   constructor(props) {
@@ -180,7 +178,9 @@ class HeaderCarousel extends Component {
               <div className="heading-typo">
                 <h2>General Construction Department</h2>
                 <div>
-                  <Link to="/">Read More</Link>
+                  <Link to="/services/general-construction-division">
+                    Read More
+                  </Link>
                   <div className="slick-btns">
                     <button
                       aria-label="previous"
@@ -206,7 +206,9 @@ class HeaderCarousel extends Component {
               <div className="heading-typo">
                 <h2>Speciality Construction Department</h2>
                 <div>
-                  <Link to="/">Read More</Link>
+                  <Link to="/services/specialized-engineering-division">
+                    Read More
+                  </Link>
                   <div className="slick-btns">
                     <button
                       aria-label="previous"

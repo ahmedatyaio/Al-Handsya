@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
-
 import { Logo } from './Menu';
 
 const StyledFooter = styled.footer`
@@ -119,13 +118,19 @@ const FooterComponent = () => {
             <h3>Services</h3>
             <ul>
               <li>
-                <Link to="/">General Construction</Link>
+                <Link to="/services/general-construction-division">
+                  General Construction
+                </Link>
               </li>
               <li>
-                <Link to="/">Specialized Engineering</Link>
+                <Link to="/services/specialized-engineering-division">
+                  Specialized Engineering
+                </Link>
               </li>
               <li>
-                <Link to="/">Construction Chemicals</Link>
+                <Link to="/services/construction-chemicals">
+                  Construction Chemicals
+                </Link>
               </li>
               <li>
                 <Link to="/">Kryton Distributors</Link>
@@ -136,16 +141,18 @@ const FooterComponent = () => {
             <h3>Products</h3>
             <ul>
               <li>
-                <Link to="/">Kryton Waterproofing</Link>
+                <Link to="/products/kryton-waterproofing">
+                  Kryton Waterproofing
+                </Link>
               </li>
               <li>
-                <Link to="/">Insuwrap PVC</Link>
+                <Link to="/products/pvc-waterproofing">Insuwrap PVC</Link>
               </li>
               <li>
-                <Link to="/">Alchimica</Link>
+                <Link to="/products/alchimica">Alchimica</Link>
               </li>
               <li>
-                <Link to="/">Olin</Link>
+                <Link to="/products/olin">Olin</Link>
               </li>
             </ul>
           </div>
@@ -153,16 +160,20 @@ const FooterComponent = () => {
             <h3>Kryton</h3>
             <ul>
               <li>
-                <Link to="/">Why Kryton</Link>
+                <Link to="/kryton/why-kryton">Why Kryton</Link>
               </li>
               <li>
-                <Link to="/">What is Kryton</Link>
+                <Link to="/kryton/what-is-kryton">What is Kryton</Link>
               </li>
               <li>
-                <Link to="/">Where to use Kryton</Link>
+                <Link to="/kryton/where-to-use-kryton">
+                  Where to use Kryton
+                </Link>
               </li>
               <li>
-                <Link to="/">Kryton Systems</Link>
+                <Link to="/kryton/kryton-systems/concrete-waterproofing">
+                  Kryton Systems
+                </Link>
               </li>
             </ul>
           </div>
@@ -170,16 +181,18 @@ const FooterComponent = () => {
             <h3>Distributors</h3>
             <ul>
               <li>
-                <Link to="/">Kryton Waterproofing</Link>
+                <Link to="/distributors/alexandria">
+                  Alexandria Distributors
+                </Link>
               </li>
               <li>
-                <Link to="/">Insuwrap PVC</Link>
+                <Link to="/distributors/cairo">Cairo Distributors</Link>
               </li>
               <li>
-                <Link to="/">Alchimica</Link>
+                <Link to="/distributors/beni-suef">Beni Suef Distributors</Link>
               </li>
               <li>
-                <Link to="/">Olin</Link>
+                <Link to="/distributors/tanta">Tanta Distributors</Link>
               </li>
             </ul>
           </div>

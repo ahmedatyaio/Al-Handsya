@@ -1,11 +1,10 @@
-import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
-
+import React from 'react';
+import styled from 'styled-components';
+import CallToAction from '../components/CallToAction';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import CallToAction from '../components/CallToAction';
 
 const PageHeader = styled.div`
   height: 35vh;
@@ -71,7 +70,7 @@ const about = ({ data }) => {
           <h1>About</h1>
         </BackgroundImage>
       </PageHeader>
-      <AboutSections>
+      <AboutSections id="our-mission">
         <h2>Our Mission</h2>
         <p>
           Backed up with our intense experience & Technical awareness, we are
@@ -100,7 +99,7 @@ const about = ({ data }) => {
           We can & we will always do it, no matter how challenging the job was.
         </p>
       </AboutSections>
-      <AboutSections>
+      <AboutSections id="our-team">
         <h2>Our Team</h2>
         <p>
           We believe that the good & highly trained team will make any company

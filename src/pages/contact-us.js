@@ -18,7 +18,6 @@ const DistributorPage = ({ children, title }) => {
         bottom: 3rem;
         font-family: ${props => props.theme.fonts.primary};
         font-size: 4rem;
-        color: ${props => props.theme.colors.yellow2};
         @media (max-width: 450px) {
           font-size: 3rem;
           width: 90%;

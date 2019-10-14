@@ -38,7 +38,7 @@ const index = ({ data }) => {
                 succeeded in recruiting lots of highly trained & incomparable
                 experienced staff.
               </p>
-              <Link to="/">Read More</Link>
+              <Link to="/about#our-mission">Read More</Link>
             </div>
           </div>
           <div className="block-image">
@@ -64,7 +64,7 @@ const index = ({ data }) => {
                 fields we are involved into, we are proud to have those
                 individuals who are always happy to deliver any job required.
               </p>
-              <Link to="/">Read More</Link>
+              <Link to="/about#our-team">Read More</Link>
             </div>
           </div>
         </TwoSidedBlock>
@@ -80,21 +80,26 @@ const index = ({ data }) => {
                 <div className="block">
                   <span className="icon-construction"></span>
                   <h3>
-                    <Link to="/">General Construction Divison</Link>
+                    <Link to="/services/general-construction-division">
+                      General Construction Division
+                    </Link>
                   </h3>
                   <p>
                     This was the starting division of the company , the division
                     was working in the company's owned real estate projects
                     only.
                   </p>
-                  <Link to="/" className="more">
+                  <Link
+                    to="/services/general-construction-division"
+                    className="more"
+                  >
                     Read More
                   </Link>
                 </div>
                 <div className="block">
                   <span className="icon-chemicals"></span>
                   <h3>
-                    <Link to="/">
+                    <Link to="/services/construction-chemicals">
                       Construction Chemicals Distribution Division
                     </Link>
                   </h3>
@@ -102,7 +107,7 @@ const index = ({ data }) => {
                     Alhandsya is proud to be the exclusive Agent & the
                     distributor for several international construction materials
                   </p>
-                  <Link to="/" className="more">
+                  <Link to="/services/construction-chemicals" className="more">
                     Read More
                   </Link>
                 </div>
@@ -123,7 +128,7 @@ const index = ({ data }) => {
                 <div className="block">
                   <span className="icon-engineer"></span>
                   <h3>
-                    <Link to="/">
+                    <Link to="/services/specialized-engineering-division">
                       Specialized Engineering Application Division
                     </Link>
                   </h3>
@@ -131,7 +136,10 @@ const index = ({ data }) => {
                     This Division was established to work on the waterproofing
                     projects only, By time we expanded our speciality range
                   </p>
-                  <Link to="/" className="more">
+                  <Link
+                    to="/services/specialized-engineering-division"
+                    className="more"
+                  >
                     Read More
                   </Link>
                 </div>
@@ -190,7 +198,7 @@ const index = ({ data }) => {
         ))}
       </OurProjects>
       <SeeAll>
-        <Link to="/" className="see-all">
+        <Link to="/projects" className="see-all">
           Check all projects
         </Link>
       </SeeAll>
