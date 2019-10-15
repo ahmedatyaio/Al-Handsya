@@ -4,7 +4,7 @@ import CallToAction from '../components/CallToAction';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const DistributorPage = ({ children, title }) => {
+const Careers = () => {
   const StyledHeader = styled.div`
     height: 20vh;
     position: relative;
@@ -47,9 +47,15 @@ const DistributorPage = ({ children, title }) => {
         flex-wrap: wrap;
         justify-content: space-around;
         margin: 2rem;
-        input,
-        textarea {
+        input {
           width: 41%;
+          padding: 1.5rem 2rem;
+          margin: 1rem 0.8rem;
+          font-size: 1.6rem;
+          font-family: ${props => props.theme.fonts.secondary};
+        }
+        textarea {
+          width: 100%;
           padding: 1.5rem 2rem;
           margin: 1rem 0.8rem;
           font-size: 1.6rem;
@@ -141,38 +147,72 @@ const DistributorPage = ({ children, title }) => {
       <StyledContent>
         <div className="form">
           <h2>Job Application Form</h2>
-          <form>
-            <input name="name" placeholder="Name" type="text" />
-            <input name="education" placeholder="Education" type="text" />
+          <form
+            action="https://getform.io/f/39c5e132-3d25-4510-b477-eeefa8576d3a"
+            method="POST"
+          >
+            <input required name="name" placeholder="Name" type="text" />
             <input
+              required
+              name="education"
+              placeholder="Education"
+              type="text"
+            />
+            <input
+              required
               name="graduation"
               placeholder="Graduation Year"
               type="text"
             />
-            <input name="dateofbirth" placeholder="Date of Birth" type="text" />
             <input
+              required
+              name="dateofbirth"
+              placeholder="Date of Birth"
+              type="date"
+            />
+            <input
+              required
               name="maritalstatus"
               placeholder="Marital Status"
               type="text"
             />
             <input
+              required
               name="militarystatus"
               placeholder="Military Status"
               type="text"
             />
-            <input name="gender" placeholder="Gender" type="text" />
-            <input name="idnumber" placeholder="ID Number" type="text" />
-            <input name="email" placeholder="Email" type="text" />
-            <input name="address" placeholder="Address" type="text" />
-            <input name="phone" placeholder="Phone" type="text" />
-            <input name="cellphone" placeholder="Cell Phone" type="text" />
+            <input required name="gender" placeholder="Gender" type="text" />
             <input
-              name="expectedsalary"
-              placeholder="Expected Salary"
+              required
+              name="idnumber"
+              placeholder="ID Number"
               type="text"
             />
+            <input required name="email" placeholder="Email" type="email" />
+            <input required name="address" placeholder="Address" type="text" />
+            <input required name="phone" placeholder="Phone" type="number" />
+            <input
+              required
+              name="cellphone"
+              placeholder="Cell Phone"
+              type="number"
+            />
+            <input
+              required
+              name="expectedsalary"
+              placeholder="Expected Salary"
+              type="number"
+            />
+            <input
+              required
+              name="cv"
+              placeholder="Upload your C.V"
+              type="file"
+            />
             <textarea
-              placeholder="Comments & Other informations"
+              rows="6"
+              placeholder="Comments & Other informations ( Optional )"
               name="comments"
             ></textarea>
             <button type="submit">Send Application</button>
@@ -196,4 +236,4 @@ const DistributorPage = ({ children, title }) => {
   );
 };
 
-export default DistributorPage;
+export default Careers;

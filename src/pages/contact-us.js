@@ -39,7 +39,7 @@ const DistributorPage = ({ children, title }) => {
         box-shadow: 0px 3px 8px 0px rgba(184, 184, 184, 0.3);
         padding: 2rem 3rem;
         border-left: 4px solid ${props => props.theme.colors.yellow};
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         ul {
           margin: 0;
           padding: 0;
@@ -52,10 +52,14 @@ const DistributorPage = ({ children, title }) => {
               font-family: ${props => props.theme.fonts.primary};
               font-size: 1.6rem;
             }
-            p {
+            p,
+            a {
               font-family: ${props => props.theme.fonts.secondary};
               font-size: 1.4rem;
               color: #333333;
+            }
+            a {
+              text-decoration: underline;
             }
           }
         }
@@ -139,7 +143,7 @@ const DistributorPage = ({ children, title }) => {
                 <h3>Email</h3>{' '}
                 <p>
                   <a href="mailto:alhandsya@alhandsya.com">
-                    Mail: alhandsya@alhandsya.com
+                    alhandsya@alhandsya.com
                   </a>
                 </p>
               </li>
@@ -153,7 +157,7 @@ const DistributorPage = ({ children, title }) => {
                 <h4>Eng. Mohamed Fawzy (Executive Manager)</h4>
                 <p>
                   <a href="mailto:m.fawzy@alhandsya.com">
-                    Mail: m.fawzy@alhandsya.com
+                    m.fawzy@alhandsya.com
                   </a>
                 </p>
               </li>
@@ -161,7 +165,7 @@ const DistributorPage = ({ children, title }) => {
                 <h4>Eng. Mahmoud Mostafa (Area Sales Manager)</h4>
                 <p>
                   <a href="mailto:alhandsya@alhandsya.com">
-                    Mail: alhandsya@alhandsya.com
+                    alhandsya@alhandsya.com
                   </a>
                 </p>
               </li>
@@ -173,7 +177,7 @@ const DistributorPage = ({ children, title }) => {
                 <h4>Eng. Mohamed Ibrahiem Safi eldien (General Manager)</h4>
                 <p>
                   <a href="mailto:m.ibrahim@alhandsya.com">
-                    Mail: m.ibrahim@alhandsya.com
+                    m.ibrahim@alhandsya.com
                   </a>
                 </p>
               </li>
@@ -181,7 +185,7 @@ const DistributorPage = ({ children, title }) => {
                 <h4>Eng. Islam Safie Eldien (Financial & Admin manager)</h4>
                 <p>
                   <a href="mailto:alhandsya@alhandsya.com">
-                    Mail: alhandsya@alhandsya.com
+                    alhandsya@alhandsya.com
                   </a>
                 </p>
               </li>
@@ -189,7 +193,7 @@ const DistributorPage = ({ children, title }) => {
                 <h4>Mr. Mohamed Hassan (HR. & Admin Coordinator))</h4>
                 <p>
                   <a href="mailto:alhandsya@alhandsya.com">
-                    Mail: alhandsya@alhandsya.com
+                    alhandsya@alhandsya.com
                   </a>
                 </p>
               </li>
