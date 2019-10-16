@@ -1,11 +1,12 @@
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import CallToAction from '../components/CallToAction';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-const projects = ({ data }) => {
+const Projects = ({ data }) => {
   const StyledHeader = styled.div`
     height: 35vh;
     .gatsby-image-wrapper {
@@ -70,11 +71,11 @@ const projects = ({ data }) => {
       display: flex;
       flex-wrap: wrap;
       margin-top: 4rem;
-      justify-content: space-between;
       .project {
         width: 32.6%;
         margin-bottom: 7.5rem;
         height: 26rem;
+        margin-right: 0.8rem;
         .gatsby-image-wrapper {
           height: 100%;
         }
@@ -94,6 +95,22 @@ const projects = ({ data }) => {
         }
       }
     }
+    .load-more {
+      background: transparent;
+      border: 2px solid ${props => props.theme.colors.yellow2};
+      font-size: 1.6rem;
+      border-radius: 2rem;
+      padding: 1rem 3rem;
+      margin-top: 2rem;
+      cursor: pointer;
+      font-family: ${props => props.theme.fonts.secondary};
+    }
+
+    @media (max-width: 1250px) {
+      .projects .project {
+        margin-right: 0.6rem;
+      }
+    }
 
     @media (max-width: 768px) {
       .filters {
@@ -103,11 +120,9 @@ const projects = ({ data }) => {
         }
       }
       .projects {
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
+        justify-content: space-between;
         .project {
-          width: 60%;
+          width: 48%;
           margin-right: 1rem;
           flex: 0 0 auto;
         }
@@ -115,12 +130,32 @@ const projects = ({ data }) => {
     }
     @media (max-width: 480px) {
       .projects .project {
-        width: 90%;
+        width: 100%;
+        margin-right: 0;
       }
     }
   `;
+
+  const firstPage = data.allProjects.edges.slice(0, 6);
+
+  const [projects, setProjects] = useState(firstPage);
+  const [allLoaded, setAllLoaded] = useState(false);
+
+  const onClick = () => {
+    let projectsRendered = projects;
+
+    if (projects.length + 6 > data.allProjects.edges.length) {
+      setAllLoaded(true);
+    } else {
+      projectsRendered = data.allProjects.edges.slice(0, projects.length + 6);
+    }
+
+    setProjects(projectsRendered);
+  };
+
   return (
     <Layout>
+      <SEO title="Projects" />
       <StyledHeader>
         <Img fluid={data.headerImg.childImageSharp.fluid} />
       </StyledHeader>
@@ -145,7 +180,7 @@ const projects = ({ data }) => {
           </li>
         </ul>
         <div className="projects">
-          {data.allProjects.edges.map(project => (
+          {projects.map(project => (
             <div key={project.node.projectName} className="project">
               <Img fluid={project.node.heroImage.fluid} />
               <h2>
@@ -155,6 +190,9 @@ const projects = ({ data }) => {
             </div>
           ))}
         </div>
+        <button disabled={allLoaded} className="load-more" onClick={onClick}>
+          {allLoaded ? 'No More' : 'Load More'}
+        </button>
       </StyledProjcets>
       <CallToAction />
     </Layout>
@@ -190,4 +228,4 @@ export const data = graphql`
   }
 `;
 
-export default projects;
+export default Projects;
